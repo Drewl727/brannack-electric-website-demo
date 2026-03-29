@@ -1,0 +1,1903 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Brannack Electric Inc. — Family-owned electrical contractor serving Hartford County since 1980. Licensed &amp; insured. 24/7 emergency service. Bloomfield, CT." />
+  <title>Brannack Electric Inc. | Licensed Electricians | Bloomfield, CT</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <style>
+    /* =============================================================
+       ROOT & RESET
+    ============================================================= */
+    :root {
+      --navy:        #0A1628;
+      --navy-800:    #0d1e33;
+      --navy-700:    #112036;
+      --navy-600:    #1a3050;
+      --yellow:      #F5C518;
+      --yellow-dark: #d4a800;
+      --white:       #FFFFFF;
+      --off-white:   #f7f9fc;
+      --gray-100:    #f1f3f7;
+      --gray-200:    #e2e6ed;
+      --gray-400:    #9aa3b0;
+      --gray-600:    #4d5966;
+      --gray-900:    #0f1923;
+
+      --font-heading: 'Montserrat', sans-serif;
+      --font-body:    'Inter', sans-serif;
+
+      --shadow-sm: 0 1px 4px rgba(0,0,0,.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,.10);
+      --shadow-lg: 0 8px 32px rgba(0,0,0,.14);
+
+      --radius:    8px;
+      --radius-lg: 14px;
+      --nav-h:     72px;
+      --ease:      0.2s ease;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html  { scroll-behavior: smooth; }
+    img   { max-width: 100%; height: auto; display: block; }
+    a     { text-decoration: none; color: inherit; }
+    ul    { list-style: none; }
+    button, input, select, textarea { font-family: inherit; }
+
+    body {
+      font-family: var(--font-body);
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--gray-900);
+      background: var(--white);
+      overflow-x: hidden;
+    }
+
+    /* Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* Sections */
+    section { padding: 88px 0; }
+
+    /* Section label (eyebrow) */
+    .section-label {
+      display: inline-block;
+      font-family: var(--font-heading);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      background: rgba(245,197,24,.1);
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 14px;
+    }
+
+    /* Section title */
+    .section-title {
+      font-family: var(--font-heading);
+      font-size: clamp(26px, 4vw, 40px);
+      font-weight: 800;
+      color: var(--navy);
+      line-height: 1.18;
+      margin-bottom: 14px;
+    }
+
+    /* Section subtitle */
+    .section-subtitle {
+      color: var(--gray-600);
+      font-size: 17px;
+      max-width: 580px;
+      line-height: 1.72;
+      margin-bottom: 52px;
+    }
+
+    .text-center { text-align: center; }
+    .text-center .section-subtitle { margin-left: auto; margin-right: auto; }
+
+    /* ---- Placeholder styling ---- */
+    .ph {
+      background: var(--yellow);
+      color: var(--navy);
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: .78em;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .ph-block {
+      background: repeating-linear-gradient(
+        -45deg,
+        #eaecf0,
+        #eaecf0 8px,
+        #d4d8e0 8px,
+        #d4d8e0 16px
+      );
+      border: 2px dashed #b0b8c8;
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      text-align: center;
+      padding: 36px 24px;
+      color: #9aa3b0;
+    }
+
+    .ph-block .ph-label {
+      background: var(--yellow);
+      color: var(--navy);
+      font-family: monospace;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 4px;
+    }
+
+    .ph-block p { font-size: 13px; line-height: 1.6; }
+
+    /* ---- Buttons ---- */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 28px;
+      border-radius: var(--radius);
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 700;
+      transition: var(--ease);
+      cursor: pointer;
+      border: 2px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--yellow);
+      color: var(--navy);
+    }
+    .btn-primary:hover {
+      background: var(--yellow-dark);
+      transform: translateY(-1px);
+      box-shadow: 0 4px 18px rgba(245,197,24,.38);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--white);
+      border-color: rgba(255,255,255,.45);
+    }
+    .btn-outline:hover {
+      border-color: var(--yellow);
+      color: var(--yellow);
+    }
+
+    .btn-navy {
+      background: var(--navy);
+      color: var(--white);
+    }
+    .btn-navy:hover {
+      background: var(--navy-600);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Focus visible */
+    :focus-visible { outline: 2px solid var(--yellow); outline-offset: 3px; }
+
+    /* =============================================================
+       1. NAVIGATION
+    ============================================================= */
+    .nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      background: var(--navy);
+      border-bottom: 2px solid rgba(245,197,24,.12);
+      transition: box-shadow .3s ease;
+    }
+
+    .nav.scrolled { box-shadow: 0 4px 28px rgba(0,0,0,.4); }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: var(--nav-h);
+      gap: 24px;
+    }
+
+    /* Logo */
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-shrink: 0;
+    }
+
+    .nav-logo-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--yellow);
+      border-radius: 7px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 21px;
+      color: var(--navy);
+      flex-shrink: 0;
+    }
+
+    .nav-logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+
+    .nav-logo-name {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--white);
+      letter-spacing: .03em;
+    }
+
+    .nav-logo-sub {
+      font-size: 11px;
+      color: var(--yellow);
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    /* Desktop links */
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+    }
+
+    .nav-links a {
+      color: rgba(255,255,255,.72);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: .03em;
+      transition: color var(--ease);
+    }
+    .nav-links a:hover { color: var(--yellow); }
+
+    /* Nav right */
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-shrink: 0;
+    }
+
+    .nav-phone {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      font-family: var(--font-heading);
+      transition: color var(--ease);
+    }
+    .nav-phone:hover { color: var(--yellow); }
+    .nav-phone i { stroke: var(--yellow); width: 17px; height: 17px; }
+
+    .btn-nav { padding: 10px 20px; font-size: 13px; }
+
+    /* Hamburger */
+    .nav-hamburger {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 4px;
+    }
+    .nav-hamburger i { stroke: var(--white); width: 26px; height: 26px; }
+
+    /* Mobile menu */
+    .nav-mobile {
+      display: none;
+      background: var(--navy-800);
+      border-top: 1px solid rgba(245,197,24,.12);
+      padding: 16px 24px 28px;
+    }
+    .nav-mobile.open { display: block; }
+
+    .nav-mobile a, .nav-mobile-phone {
+      display: block;
+      color: rgba(255,255,255,.8);
+      font-size: 16px;
+      font-weight: 600;
+      padding: 12px 0;
+      border-bottom: 1px solid rgba(255,255,255,.07);
+      transition: color var(--ease);
+    }
+    .nav-mobile a:hover { color: var(--yellow); }
+    .nav-mobile .btn-primary {
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+      width: 100%;
+    }
+
+    /* =============================================================
+       2. HERO
+    ============================================================= */
+    .hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--navy);
+      overflow: hidden;
+      padding-top: var(--nav-h);
+    }
+
+    /* Circuit-board pattern */
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23F5C518' stroke-width='0.5' stroke-opacity='0.13'%3E%3Cpath d='M40 0 L40 20 M40 60 L40 80 M0 40 L20 40 M60 40 L80 40'/%3E%3Cpath d='M40 20 L60 20 L60 40'/%3E%3Cpath d='M40 60 L20 60 L20 40'/%3E%3C/g%3E%3Ccircle cx='40' cy='40' r='3.5' fill='%23F5C518' fill-opacity='0.09'/%3E%3Ccircle cx='20' cy='40' r='2' fill='%23F5C518' fill-opacity='0.09'/%3E%3Ccircle cx='60' cy='40' r='2' fill='%23F5C518' fill-opacity='0.09'/%3E%3Ccircle cx='40' cy='20' r='2' fill='%23F5C518' fill-opacity='0.09'/%3E%3Ccircle cx='40' cy='60' r='2' fill='%23F5C518' fill-opacity='0.09'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+
+    /* Radial glow */
+    .hero::after {
+      content: '';
+      position: absolute;
+      bottom: -120px;
+      right: -120px;
+      width: 560px;
+      height: 560px;
+      background: radial-gradient(circle, rgba(245,197,24,.08) 0%, transparent 68%);
+      pointer-events: none;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      padding: 72px 0;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,197,24,.1);
+      border: 1px solid rgba(245,197,24,.28);
+      color: var(--yellow);
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: .04em;
+      margin-bottom: 28px;
+    }
+    .hero-badge i { width: 14px; height: 14px; stroke: var(--yellow); }
+
+    .hero-headline {
+      font-family: var(--font-heading);
+      font-size: clamp(38px, 6.5vw, 72px);
+      font-weight: 900;
+      color: var(--white);
+      line-height: 1.05;
+      margin-bottom: 24px;
+      letter-spacing: -.025em;
+    }
+    .hero-headline .accent { color: var(--yellow); }
+
+    .hero-sub {
+      font-size: clamp(16px, 2vw, 20px);
+      color: rgba(255,255,255,.68);
+      max-width: 560px;
+      margin-bottom: 40px;
+      line-height: 1.72;
+    }
+
+    .hero-ctas { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; }
+    .hero-ctas .btn { padding: 16px 32px; font-size: 16px; }
+
+    .hero-stats {
+      display: flex;
+      gap: 40px;
+      margin-top: 64px;
+      padding-top: 40px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      flex-wrap: wrap;
+    }
+
+    .hero-stat-num {
+      font-family: var(--font-heading);
+      font-size: 34px;
+      font-weight: 900;
+      color: var(--yellow);
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+
+    .hero-stat-label {
+      font-size: 12px;
+      color: rgba(255,255,255,.5);
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+    }
+
+    /* =============================================================
+       3. TRUST BAR
+    ============================================================= */
+    .trust-bar { background: var(--yellow); }
+
+    .trust-bar-inner {
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 22px 36px;
+      flex: 1;
+      min-width: 180px;
+      justify-content: center;
+      border-right: 1px solid rgba(10,22,40,.14);
+    }
+    .trust-item:last-child { border-right: none; }
+
+    .trust-item i { stroke: var(--navy); width: 22px; height: 22px; flex-shrink: 0; }
+
+    .trust-item-text {
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    /* =============================================================
+       4. SERVICES
+    ============================================================= */
+    .services { background: var(--off-white); }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .service-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+      cursor: default;
+    }
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--yellow);
+    }
+
+    .service-card-icon {
+      width: 52px;
+      height: 52px;
+      background: rgba(10,22,40,.06);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+      transition: background var(--ease);
+    }
+    .service-card:hover .service-card-icon { background: rgba(245,197,24,.14); }
+
+    .service-card-icon i { stroke: var(--navy); width: 26px; height: 26px; }
+
+    .service-card h3 {
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .service-card p { font-size: 14px; color: var(--gray-600); line-height: 1.62; }
+
+    /* Placeholder card */
+    .service-card-ph {
+      border: 2px dashed var(--gray-400) !important;
+      background: transparent !important;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      gap: 10px;
+      min-height: 160px;
+    }
+    .service-card-ph:hover { transform: none !important; box-shadow: none !important; border-color: var(--yellow) !important; }
+    .service-card-ph > i { stroke: var(--gray-400); width: 32px; height: 32px; }
+    .service-card-ph > p { color: var(--gray-400); font-size: 13px; }
+
+    /* =============================================================
+       5. ABOUT
+    ============================================================= */
+    .about { background: var(--white); }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .about-image { position: relative; }
+    .about-image .ph-block { min-height: 460px; }
+
+    .about-accent {
+      position: absolute;
+      bottom: -18px;
+      right: -18px;
+      background: var(--yellow);
+      border-radius: var(--radius-lg);
+      padding: 22px 28px;
+      box-shadow: var(--shadow-md);
+    }
+    .about-accent-num {
+      font-family: var(--font-heading);
+      font-size: 38px;
+      font-weight: 900;
+      color: var(--navy);
+      line-height: 1;
+    }
+    .about-accent-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--navy);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    .about-body p {
+      color: var(--gray-600);
+      margin-bottom: 16px;
+      font-size: 16px;
+      line-height: 1.78;
+    }
+
+    .about-checks { display: flex; flex-direction: column; gap: 12px; margin: 28px 0; }
+
+    .about-check {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+
+    .about-check-icon {
+      width: 28px;
+      height: 28px;
+      background: rgba(245,197,24,.14);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .about-check-icon i { stroke: var(--navy); width: 14px; height: 14px; }
+
+    /* =============================================================
+       6. WHY CHOOSE US
+    ============================================================= */
+    .why {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .why::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23F5C518' stroke-width='0.4' stroke-opacity='0.07'%3E%3Cpath d='M40 0 L40 20 M40 60 L40 80 M0 40 L20 40 M60 40 L80 40'/%3E%3Cpath d='M40 20 L60 20 L60 40 M40 60 L20 60 L20 40'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+
+    .why .section-title  { color: var(--white); }
+    .why .section-subtitle { color: rgba(255,255,255,.58); }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .why-card {
+      background: rgba(255,255,255,.04);
+      border: 1px solid rgba(255,255,255,.08);
+      border-radius: var(--radius-lg);
+      padding: 34px 24px;
+      text-align: center;
+      transition: background var(--ease), border-color var(--ease);
+    }
+    .why-card:hover {
+      background: rgba(245,197,24,.06);
+      border-color: rgba(245,197,24,.28);
+    }
+
+    .why-icon {
+      width: 62px;
+      height: 62px;
+      background: rgba(245,197,24,.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 20px;
+    }
+    .why-icon i { stroke: var(--yellow); width: 28px; height: 28px; }
+
+    .why-card h3 {
+      font-family: var(--font-heading);
+      font-size: 17px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+    }
+
+    .why-card p { font-size: 14px; color: rgba(255,255,255,.52); line-height: 1.68; }
+
+    /* =============================================================
+       7. REVIEWS
+    ============================================================= */
+    .reviews { background: var(--off-white); }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .review-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      transition: box-shadow var(--ease);
+    }
+    .review-card:hover { box-shadow: var(--shadow-lg); }
+
+    .review-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 14px;
+    }
+
+    .review-avatar {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--navy);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-heading);
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--yellow);
+      flex-shrink: 0;
+    }
+
+    .review-name { font-family: var(--font-heading); font-size: 15px; font-weight: 700; color: var(--navy); }
+    .review-meta { font-size: 12px; color: var(--gray-400); margin-top: 2px; }
+
+    .review-stars {
+      display: flex;
+      gap: 2px;
+      margin-bottom: 14px;
+    }
+    .review-stars i { width: 16px; height: 16px; fill: var(--yellow); stroke: var(--yellow); }
+
+    .review-text { font-size: 15px; color: var(--gray-600); line-height: 1.72; font-style: italic; }
+
+    .review-footer {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      font-size: 12px;
+      color: var(--gray-400);
+      font-weight: 500;
+    }
+
+    /* =============================================================
+       8. SERVICE AREA
+    ============================================================= */
+    .service-area { background: var(--white); }
+
+    .area-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+    }
+
+    .area-towns { display: flex; flex-direction: column; gap: 12px; margin-bottom: 32px; }
+
+    .area-town {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--gray-900);
+    }
+    .area-town i { stroke: var(--yellow); width: 17px; height: 17px; flex-shrink: 0; }
+
+    .area-note { font-size: 14px; color: var(--gray-400); font-style: italic; }
+
+    .map-placeholder {
+      min-height: 380px;
+      background: linear-gradient(135deg, #edf0f4, #d8dde7);
+      border: 2px dashed #b0b8c8;
+      border-radius: var(--radius-lg);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      color: var(--gray-400);
+      text-align: center;
+      padding: 24px;
+    }
+    .map-placeholder i { stroke: #b0b8c8; width: 52px; height: 52px; }
+    .map-placeholder .ph { font-size: 13px; padding: 6px 14px; }
+    .map-placeholder p { font-size: 13px; line-height: 1.65; max-width: 260px; }
+
+    /* =============================================================
+       9. CONTACT
+    ============================================================= */
+    .contact {
+      background: var(--navy);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .contact::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23F5C518' stroke-width='0.4' stroke-opacity='0.07'%3E%3Cpath d='M40 0 L40 20 M40 60 L40 80 M0 40 L20 40 M60 40 L80 40'/%3E%3Cpath d='M40 20 L60 20 L60 40 M40 60 L20 60 L20 40'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 80px 80px;
+      pointer-events: none;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 72px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+
+    .contact .section-title { color: var(--white); }
+
+    .emergency-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(245,197,24,.1);
+      border: 1px solid rgba(245,197,24,.28);
+      color: var(--yellow);
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-size: 13px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .emergency-badge i { stroke: var(--yellow); width: 14px; height: 14px; }
+
+    .contact-phone-big {
+      display: block;
+      font-family: var(--font-heading);
+      font-size: clamp(30px, 4vw, 44px);
+      font-weight: 900;
+      color: var(--yellow);
+      margin-bottom: 36px;
+      transition: opacity var(--ease);
+    }
+    .contact-phone-big:hover { opacity: .82; }
+
+    .contact-info-block {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      margin-bottom: 24px;
+    }
+
+    .contact-info-icon {
+      width: 44px;
+      height: 44px;
+      background: rgba(245,197,24,.1);
+      border-radius: var(--radius);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .contact-info-icon i { stroke: var(--yellow); width: 21px; height: 21px; }
+
+    .contact-info-label {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--yellow);
+      margin-bottom: 5px;
+    }
+
+    .contact-info-value { color: rgba(255,255,255,.82); font-size: 15px; line-height: 1.58; }
+
+    /* Form */
+    .contact-form {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius-lg);
+      padding: 36px;
+    }
+
+    .contact-form h3 {
+      font-family: var(--font-heading);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 24px;
+    }
+
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+
+    .form-group { margin-bottom: 16px; }
+
+    .form-group label {
+      display: block;
+      font-size: 13px;
+      font-weight: 600;
+      color: rgba(255,255,255,.68);
+      margin-bottom: 7px;
+      letter-spacing: .03em;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.14);
+      border-radius: var(--radius);
+      padding: 12px 16px;
+      color: var(--white);
+      font-size: 15px;
+      transition: border-color var(--ease), background var(--ease);
+      outline: none;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder { color: rgba(255,255,255,.28); }
+
+    .form-group select option { background: var(--navy-700); color: var(--white); }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--yellow);
+      background: rgba(255,255,255,.1);
+    }
+
+    .form-group textarea { resize: vertical; min-height: 112px; }
+
+    #form-success {
+      display: none;
+      margin-top: 14px;
+      background: rgba(245,197,24,.12);
+      border: 1px solid rgba(245,197,24,.3);
+      color: var(--yellow);
+      padding: 12px 16px;
+      border-radius: var(--radius);
+      font-size: 14px;
+      font-weight: 600;
+      text-align: center;
+    }
+
+    /* =============================================================
+       10. FOOTER
+    ============================================================= */
+    .footer {
+      background: var(--gray-900);
+      color: rgba(255,255,255,.56);
+      padding: 64px 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.5fr;
+      gap: 48px;
+      padding-bottom: 48px;
+      border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+
+    .footer-brand p {
+      font-size: 14px;
+      line-height: 1.72;
+      margin-top: 16px;
+      max-width: 270px;
+    }
+
+    .footer-col h4 {
+      font-family: var(--font-heading);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .11em;
+      text-transform: uppercase;
+      color: var(--white);
+      margin-bottom: 18px;
+    }
+
+    .footer-col ul li { margin-bottom: 10px; }
+
+    .footer-col ul li a {
+      font-size: 14px;
+      color: rgba(255,255,255,.5);
+      transition: color var(--ease);
+    }
+    .footer-col ul li a:hover { color: var(--yellow); }
+
+    .footer-contact-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 14px;
+      font-size: 14px;
+      color: rgba(255,255,255,.5);
+    }
+    .footer-contact-item i { stroke: var(--yellow); width: 15px; height: 15px; flex-shrink: 0; margin-top: 2px; }
+
+    .footer-bottom {
+      padding: 20px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .footer-bottom p { font-size: 13px; color: rgba(255,255,255,.3); }
+
+    .footer-bottom-links { display: flex; gap: 24px; }
+    .footer-bottom-links a { font-size: 13px; color: rgba(255,255,255,.3); transition: color var(--ease); }
+    .footer-bottom-links a:hover { color: var(--yellow); }
+
+    /* =============================================================
+       RESPONSIVE
+    ============================================================= */
+    @media (max-width: 1024px) {
+      .nav-links  { display: none; }
+      .nav-phone  { display: none; }
+      .btn-nav    { display: none; }
+      .nav-hamburger { display: block; }
+
+      .why-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; }
+    }
+
+    @media (max-width: 768px) {
+      section { padding: 64px 0; }
+
+      .hero-content  { padding: 56px 0; }
+      .hero-stats    { gap: 24px; }
+
+      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      .reviews-grid  { grid-template-columns: 1fr; }
+      .about-grid    { grid-template-columns: 1fr; gap: 0; }
+      .about-image   { margin-bottom: 40px; }
+      .about-image .ph-block { min-height: 260px; }
+      .about-accent  { display: none; }
+      .area-grid     { grid-template-columns: 1fr; }
+      .contact-grid  { grid-template-columns: 1fr; gap: 48px; }
+      .form-row      { grid-template-columns: 1fr; }
+      .footer-grid   { grid-template-columns: 1fr; gap: 28px; }
+
+      .trust-item { padding: 18px 16px; min-width: 150px; }
+      .trust-item-text { font-size: 11px; }
+    }
+
+    @media (max-width: 480px) {
+      .services-grid { grid-template-columns: 1fr; }
+      .hero-ctas { flex-direction: column; }
+      .hero-ctas .btn { width: 100%; justify-content: center; }
+      .contact-form  { padding: 24px 18px; }
+    }
+
+    /* Reduced motion */
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; animation: none !important; }
+      html { scroll-behavior: auto; }
+    }
+
+    /* Loader spin */
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .spin { animation: spin .9s linear infinite; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ============================================================
+       1. NAVIGATION
+  ============================================================ -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+
+        <!-- Logo -->
+        <a href="#" class="nav-logo" aria-label="Brannack Electric Inc — Home">
+          <div class="nav-logo-icon" aria-hidden="true">B</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">BRANNACK ELECTRIC</span>
+            <span class="nav-logo-sub">Inc.</span>
+          </div>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="nav-links" role="list">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#service-area">Service Area</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Right side -->
+        <div class="nav-right">
+          <a href="tel:8602426486" class="nav-phone" aria-label="Call (860) 242-6486">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            (860) 242-6486
+          </a>
+          <a href="#contact" class="btn btn-primary btn-nav">Request Service</a>
+        </div>
+
+        <!-- Hamburger -->
+        <button class="nav-hamburger" id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+
+      </nav>
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="nav-mobile" id="mobileMenu" aria-hidden="true">
+      <a href="#services"    onclick="closeMenu()">Services</a>
+      <a href="#about"       onclick="closeMenu()">About</a>
+      <a href="#reviews"     onclick="closeMenu()">Reviews</a>
+      <a href="#service-area" onclick="closeMenu()">Service Area</a>
+      <a href="#contact"     onclick="closeMenu()">Contact</a>
+      <a href="tel:8602426486"
+        style="display:flex;align-items:center;gap:10px;color:var(--yellow)!important;">
+        <i data-lucide="phone" aria-hidden="true"
+           style="width:17px;height:17px;stroke:var(--yellow)"></i>
+        (860) 242-6486
+      </a>
+      <a href="#contact" class="btn btn-primary" onclick="closeMenu()">Request Service</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+  <!-- ============================================================
+       2. HERO
+  ============================================================ -->
+  <section class="hero" id="hero" aria-label="Introduction">
+    <div class="container">
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          <i data-lucide="zap" aria-hidden="true"></i>
+          Family-Owned Since 1980 &nbsp;·&nbsp; Bloomfield, CT
+        </div>
+
+        <h1 class="hero-headline">
+          Hartford County's<br>
+          <span class="accent">Trusted Electrical</span><br>
+          Contractor
+        </h1>
+
+        <p class="hero-sub">
+          Licensed &amp; insured electrical services for residential and commercial properties.
+          From panel upgrades to generator installation — done right the first time.
+        </p>
+
+        <div class="hero-ctas">
+          <a href="tel:8602426486" class="btn btn-primary" aria-label="Call now: (860) 242-6486">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            Call (860) 242-6486
+          </a>
+          <a href="#services" class="btn btn-outline">
+            Our Services
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </a>
+        </div>
+
+        <div class="hero-stats" aria-label="Key figures">
+          <div class="hero-stat">
+            <div class="hero-stat-num">45+</div>
+            <div class="hero-stat-label">Years in Business</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">5.0</div>
+            <div class="hero-stat-label">Google Rating</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">24/7</div>
+            <div class="hero-stat-label">Emergency Service</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat-num">CT</div>
+            <div class="hero-stat-label">Licensed &amp; Insured</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       3. TRUST BAR
+  ============================================================ -->
+  <div class="trust-bar" role="complementary" aria-label="Trust signals">
+    <div class="trust-bar-inner container">
+      <div class="trust-item">
+        <i data-lucide="calendar" aria-hidden="true"></i>
+        <span class="trust-item-text">Est. 1980</span>
+      </div>
+      <div class="trust-item">
+        <i data-lucide="star" aria-hidden="true"></i>
+        <span class="trust-item-text">5.0 Google Rating</span>
+      </div>
+      <div class="trust-item">
+        <i data-lucide="shield-check" aria-hidden="true"></i>
+        <span class="trust-item-text">Licensed &amp; Insured</span>
+      </div>
+      <div class="trust-item">
+        <i data-lucide="clock" aria-hidden="true"></i>
+        <span class="trust-item-text">24/7 Emergency Service</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================
+       4. SERVICES
+  ============================================================ -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">What We Do</span>
+        <h2 class="section-title" id="services-heading">Our Electrical Services</h2>
+        <p class="section-subtitle">
+          From routine inspections to full commercial installs — our licensed electricians
+          handle it all with the expertise of a 45-year family business.
+        </p>
+      </div>
+
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-card-icon"><i data-lucide="clipboard-check" aria-hidden="true"></i></div>
+          <h3>Electric Inspection</h3>
+          <p>Comprehensive safety inspections for residential and commercial properties to meet code requirements.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon"><i data-lucide="zap" aria-hidden="true"></i></div>
+          <h3>Electric Installation &amp; Replacement</h3>
+          <p>Expert installation of all electrical systems and components — done safely and up to code.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon"><i data-lucide="grid-2x2" aria-hidden="true"></i></div>
+          <h3>Electric Panel Installation</h3>
+          <p>Full panel upgrades and new electrical panel installation for homes and commercial buildings.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon"><i data-lucide="wrench" aria-hidden="true"></i></div>
+          <h3>Electric Panel Repair</h3>
+          <p>Fast, reliable panel repairs by licensed professionals — diagnosing and resolving issues quickly.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon"><i data-lucide="settings-2" aria-hidden="true"></i></div>
+          <h3>Electric Repair</h3>
+          <p>Troubleshooting and repair of all electrical issues — outlets, wiring, breakers, and more.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon"><i data-lucide="cable" aria-hidden="true"></i></div>
+          <h3>Wire Installation</h3>
+          <p>Professional wiring for new construction, renovations, and system upgrades — done to code.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon"><i data-lucide="battery-charging" aria-hidden="true"></i></div>
+          <h3>Generator Installation</h3>
+          <p>Whole-home and commercial generator installation and hookup — stay powered when it matters most.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon"><i data-lucide="lamp" aria-hidden="true"></i></div>
+          <h3>Light Fixture Installation</h3>
+          <p>Indoor and outdoor fixture installation and upgrades — from ceiling fans to commercial lighting.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card-icon"><i data-lucide="lightbulb" aria-hidden="true"></i></div>
+          <h3>Light Fixture Repair</h3>
+          <p>Fast diagnosis and repair of malfunctioning fixtures, ballasts, and lighting systems.</p>
+        </div>
+
+        <!-- Placeholder card -->
+        <div class="service-card service-card-ph" aria-label="Placeholder: service to be added">
+          <i data-lucide="plus-circle" aria-hidden="true"></i>
+          <span class="ph">[Add Service]</span>
+          <p>Additional service — to be filled in by client</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       5. ABOUT
+  ============================================================ -->
+  <section class="about" id="about" aria-labelledby="about-heading">
+    <div class="container">
+      <div class="about-grid">
+
+        <!-- Image -->
+        <div class="about-image">
+          <div class="ph-block" style="min-height:460px;"
+               role="img" aria-label="Placeholder: owner or team photo">
+            <i data-lucide="image" aria-hidden="true"
+               style="width:52px;height:52px;stroke:#b0b8c8;"></i>
+            <span class="ph-label">[OWNER PHOTO]</span>
+            <p>Replace with a photo of <span class="ph">[OWNER NAME]</span><br>
+               or the Brannack Electric team</p>
+          </div>
+          <div class="about-accent" aria-hidden="true">
+            <div class="about-accent-num">45+</div>
+            <div class="about-accent-label">Years of Service</div>
+          </div>
+        </div>
+
+        <!-- Text -->
+        <div class="about-body">
+          <span class="section-label">About Us</span>
+          <h2 class="section-title" id="about-heading">
+            A Family Business Built on Quality
+          </h2>
+
+          <p>
+            Brannack Electric Inc. has been serving the greater Hartford County area since
+            1980 — over four decades of trusted, family-owned electrical service. We're not
+            a franchise or a call center. When you call us, you get us.
+          </p>
+
+          <p>
+            Founded by <span class="ph">[OWNER NAME]</span>, our company has grown from a
+            small local operation to one of Bloomfield's most recognized electrical
+            contractors — built one satisfied customer at a time.
+          </p>
+
+          <p>
+            Whether it's a residential panel upgrade or a full commercial electrical
+            installation, we bring the same level of care, expertise, and craftsmanship
+            to every job.
+          </p>
+
+          <ul class="about-checks" aria-label="Company highlights">
+            <li class="about-check">
+              <div class="about-check-icon"><i data-lucide="check" aria-hidden="true"></i></div>
+              Family-owned and operated since 1980
+            </li>
+            <li class="about-check">
+              <div class="about-check-icon"><i data-lucide="check" aria-hidden="true"></i></div>
+              Licensed electrical contractor in Connecticut
+            </li>
+            <li class="about-check">
+              <div class="about-check-icon"><i data-lucide="check" aria-hidden="true"></i></div>
+              Serving Bloomfield, Hartford County &amp; surrounding towns
+            </li>
+            <li class="about-check">
+              <div class="about-check-icon"><i data-lucide="check" aria-hidden="true"></i></div>
+              Commercial, industrial &amp; residential expertise
+            </li>
+          </ul>
+
+          <a href="#contact" class="btn btn-navy">
+            Get a Free Estimate
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       6. WHY CHOOSE US
+  ============================================================ -->
+  <section class="why" id="why" aria-labelledby="why-heading">
+    <div class="container">
+      <div class="text-center" style="position:relative;z-index:1;">
+        <span class="section-label">Why Brannack</span>
+        <h2 class="section-title" id="why-heading">Why Choose Us</h2>
+        <p class="section-subtitle">
+          Decades of experience, a commitment to quality, and a team that shows up
+          when they say they will.
+        </p>
+      </div>
+
+      <div class="why-grid">
+
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="timer" aria-hidden="true"></i></div>
+          <h3>Fast Response</h3>
+          <p>We answer calls — and show up. Available 24/7 for electrical emergencies when you need us most.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="shield-check" aria-hidden="true"></i></div>
+          <h3>Licensed &amp; Insured</h3>
+          <p>Fully licensed in Connecticut. All work meets state and local code requirements — no shortcuts.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="award" aria-hidden="true"></i></div>
+          <h3>45+ Years Experience</h3>
+          <p>Since 1980, we've built a reputation for doing the job right the first time — no guesswork.</p>
+        </div>
+
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="building-2" aria-hidden="true"></i></div>
+          <h3>Commercial &amp; Residential</h3>
+          <p>From a single-family home to a commercial facility — our team has the range to handle it all.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       7. REVIEWS
+  ============================================================ -->
+  <section class="reviews" id="reviews" aria-labelledby="reviews-heading">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Customer Reviews</span>
+        <h2 class="section-title" id="reviews-heading">What Our Customers Say</h2>
+        <p class="section-subtitle">
+          We've earned a 5.0-star Google rating — here's what our customers have to say
+          about working with Brannack Electric.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+
+        <!-- Review 1 -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">J</div>
+            <div>
+              <div class="review-name">John M.</div>
+              <div class="review-meta"><span class="ph">[Bloomfield, CT]</span></div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+          </div>
+          <p class="review-text">
+            "<span class="ph">[Replace with real Google review. Example: Brannack Electric did an
+            outstanding job upgrading our electrical panel. Professional, prompt, and fairly priced.
+            Will absolutely use them again — highly recommend to anyone in the area.]</span>"
+          </p>
+          <div class="review-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Google Review
+          </div>
+        </article>
+
+        <!-- Review 2 -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">S</div>
+            <div>
+              <div class="review-name">Sarah T.</div>
+              <div class="review-meta"><span class="ph">[West Hartford, CT]</span></div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+          </div>
+          <p class="review-text">
+            "<span class="ph">[Replace with real Google review. Example: Called Brannack Electric for
+            a generator install and couldn't be happier. They were on time, clean, and explained
+            everything thoroughly. Highly recommend — great family business!]</span>"
+          </p>
+          <div class="review-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Google Review
+          </div>
+        </article>
+
+        <!-- Review 3 -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">M</div>
+            <div>
+              <div class="review-name">Mike R.</div>
+              <div class="review-meta"><span class="ph">[Windsor, CT]</span></div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+          </div>
+          <p class="review-text">
+            "<span class="ph">[Replace with real Google review. Example: Used Brannack Electric for
+            our commercial space rewiring project. Incredibly professional — the work passed
+            inspection on the first visit. Will be using them for all future electrical needs.]</span>"
+          </p>
+          <div class="review-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
+            </svg>
+            Google Review
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       8. SERVICE AREA
+  ============================================================ -->
+  <section class="service-area" id="service-area" aria-labelledby="area-heading">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Where We Work</span>
+        <h2 class="section-title" id="area-heading">Service Area</h2>
+        <p class="section-subtitle">
+          Proudly serving Bloomfield and the greater Hartford County area for over 45 years.
+        </p>
+      </div>
+
+      <div class="area-grid">
+
+        <div>
+          <ul class="area-towns" aria-label="Towns we serve">
+            <li class="area-town">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              Bloomfield, CT
+              <span style="margin-left:8px;" class="ph">[Primary]</span>
+            </li>
+            <li class="area-town">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              West Hartford, CT
+            </li>
+            <li class="area-town">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              Hartford, CT
+            </li>
+            <li class="area-town">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              Windsor, CT
+            </li>
+            <li class="area-town">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              Simsbury, CT
+            </li>
+            <li class="area-town">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              Windsor Locks, CT
+            </li>
+            <li class="area-town">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              Granby, CT
+            </li>
+            <li class="area-town">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              East Granby, CT
+            </li>
+          </ul>
+
+          <p class="area-note">+ surrounding Hartford County towns — call to confirm your area.</p>
+
+          <div style="margin-top:32px;">
+            <a href="tel:8602426486" class="btn btn-navy" style="display:inline-flex;">
+              <i data-lucide="phone" aria-hidden="true"></i>
+              Check Your Area — (860) 242-6486
+            </a>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-placeholder" role="img" aria-label="Map embed placeholder">
+          <i data-lucide="map" aria-hidden="true"></i>
+          <span class="ph">[MAP EMBED PLACEHOLDER]</span>
+          <p>
+            Replace with a Google Maps embed centered on<br>
+            37 Tunxis Ave, Bloomfield, CT 06002
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       9. CONTACT
+  ============================================================ -->
+  <section class="contact" id="contact" aria-labelledby="contact-heading">
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Info column -->
+        <div>
+          <span class="section-label">Get In Touch</span>
+          <h2 class="section-title" id="contact-heading">Request Service</h2>
+
+          <div class="emergency-badge">
+            <i data-lucide="zap" aria-hidden="true"></i>
+            24/7 Emergency Service Available
+          </div>
+
+          <a href="tel:8602426486" class="contact-phone-big"
+             aria-label="Call Brannack Electric at (860) 242-6486">
+            (860) 242-6486
+          </a>
+
+          <div class="contact-info-block">
+            <div class="contact-info-icon"><i data-lucide="map-pin" aria-hidden="true"></i></div>
+            <div>
+              <div class="contact-info-label">Address</div>
+              <div class="contact-info-value">
+                37 Tunxis Ave<br>Bloomfield, CT 06002
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="contact-info-icon"><i data-lucide="clock" aria-hidden="true"></i></div>
+            <div>
+              <div class="contact-info-label">Hours</div>
+              <div class="contact-info-value">
+                Mon – Fri: 7:00 AM – 5:00 PM<br>
+                <span class="ph">[Add weekend hours if applicable]</span><br>
+                <strong style="color:var(--yellow);">24/7 Emergency Service Available</strong>
+              </div>
+            </div>
+          </div>
+
+          <div class="contact-info-block">
+            <div class="contact-info-icon"><i data-lucide="star" aria-hidden="true"></i></div>
+            <div>
+              <div class="contact-info-label">Google Rating</div>
+              <div class="contact-info-value">
+                5.0 Stars on Google
+                <div class="review-stars" style="margin-top:6px;" aria-label="5 out of 5 stars">
+                  <i data-lucide="star" aria-hidden="true"></i>
+                  <i data-lucide="star" aria-hidden="true"></i>
+                  <i data-lucide="star" aria-hidden="true"></i>
+                  <i data-lucide="star" aria-hidden="true"></i>
+                  <i data-lucide="star" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Form column -->
+        <div class="contact-form">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm" action="#" method="POST"
+                onsubmit="handleSubmit(event)" novalidate
+                aria-label="Service request form">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fname">Full Name *</label>
+                <input type="text" id="fname" name="name"
+                       placeholder="John Smith"
+                       required autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="fphone">Phone Number *</label>
+                <input type="tel" id="fphone" name="phone"
+                       placeholder="(860) 555-0000"
+                       required autocomplete="tel" />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="femail">Email Address</label>
+              <input type="email" id="femail" name="email"
+                     placeholder="john@example.com"
+                     autocomplete="email" />
+            </div>
+
+            <div class="form-group">
+              <label for="fservice">Service Needed *</label>
+              <select id="fservice" name="service" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option value="inspection">Electric Inspection</option>
+                <option value="installation">Electric Installation &amp; Replacement</option>
+                <option value="panel-install">Electric Panel Installation</option>
+                <option value="panel-repair">Electric Panel Repair</option>
+                <option value="repair">Electric Repair</option>
+                <option value="wiring">Wire Installation</option>
+                <option value="generator">Generator Installation</option>
+                <option value="fixture-install">Light Fixture Installation</option>
+                <option value="fixture-repair">Light Fixture Repair</option>
+                <option value="emergency">Emergency Service</option>
+                <option value="other">Other / Not Sure</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="fmessage">Message</label>
+              <textarea id="fmessage" name="message"
+                placeholder="Describe your electrical needs or any details that would help us…"></textarea>
+            </div>
+
+            <button type="submit" id="submitBtn" class="btn btn-primary"
+                    style="width:100%;justify-content:center;padding:16px;">
+              <i data-lucide="send" aria-hidden="true"></i>
+              Send Request
+            </button>
+
+            <div id="form-success" role="status" aria-live="polite">
+              Message received — we'll be in touch soon!
+              For urgent needs, call <a href="tel:8602426486" style="color:var(--yellow);">(860) 242-6486</a>.
+            </div>
+
+            <p style="margin-top:14px;font-size:12px;color:rgba(255,255,255,.3);text-align:center;">
+              * Required fields. For immediate assistance, call
+              <a href="tel:8602426486" style="color:var(--yellow);">(860) 242-6486</a>.
+            </p>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- ============================================================
+       10. FOOTER
+  ============================================================ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="#" class="nav-logo" aria-label="Brannack Electric Inc — Home">
+            <div class="nav-logo-icon" aria-hidden="true">B</div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">BRANNACK ELECTRIC</span>
+              <span class="nav-logo-sub">Inc.</span>
+            </div>
+          </a>
+          <p>
+            Family-owned electrical contractor serving Hartford County
+            since 1980. Licensed, insured, and committed to quality work.
+          </p>
+        </div>
+
+        <!-- Quick links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul role="list">
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#service-area">Service Area</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="#services">Panel Installation</a></li>
+            <li><a href="#services">Panel Repair</a></li>
+            <li><a href="#services">Generator Install</a></li>
+            <li><a href="#services">Wire Installation</a></li>
+            <li><a href="#services">Inspections</a></li>
+            <li><a href="#services">Emergency Service</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact info -->
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            <a href="tel:8602426486"
+               style="color:rgba(255,255,255,.5);transition:color .2s ease;">
+              (860) 242-6486
+            </a>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <span>37 Tunxis Ave<br>Bloomfield, CT 06002</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="clock" aria-hidden="true"></i>
+            <span>24/7 Emergency Service</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="star" aria-hidden="true"></i>
+            <span>5.0 Stars on Google</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom">
+        <p>&copy; 2025 Brannack Electric Inc. All rights reserved. CT Licensed Electrical Contractor.</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+
+    // Sticky nav shadow
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    // Mobile menu
+    const hamburger   = document.getElementById('hamburger');
+    const mobileMenu  = document.getElementById('mobileMenu');
+
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+    });
+
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target)) closeMenu();
+    });
+
+    // Smooth scroll — offset for fixed nav
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function (e) {
+        const selector = this.getAttribute('href');
+        if (selector === '#') return;
+        const target = document.querySelector(selector);
+        if (!target) return;
+        e.preventDefault();
+        closeMenu();
+        const offset = nav.offsetHeight + 16;
+        const top = target.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top, behavior: 'smooth' });
+      });
+    });
+
+    // Contact form (demo — no backend)
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn     = document.getElementById('submitBtn');
+      const success = document.getElementById('form-success');
+
+      btn.disabled = true;
+      btn.innerHTML = '<i data-lucide="loader-2" style="width:16px;height:16px;" class="spin"></i> Sending…';
+      lucide.createIcons();
+
+      setTimeout(() => {
+        success.style.display = 'block';
+        e.target.reset();
+        btn.disabled = false;
+        btn.innerHTML = '<i data-lucide="send"></i> Send Request';
+        lucide.createIcons();
+      }, 1300);
+    }
+  </script>
+
+</body>
+</html>
