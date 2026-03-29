@@ -118,7 +118,8 @@
       font-family: monospace;
       font-size: .78em;
       font-weight: 700;
-      white-space: nowrap;
+      word-break: break-word;
+      overflow-wrap: anywhere;
     }
 
     .ph-block {
@@ -734,7 +735,14 @@
     }
     .review-stars i { width: 16px; height: 16px; fill: var(--yellow); stroke: var(--yellow); }
 
-    .review-text { font-size: 15px; color: var(--gray-600); line-height: 1.72; font-style: italic; }
+    .review-text {
+      font-size: 15px;
+      color: var(--gray-600);
+      line-height: 1.72;
+      font-style: italic;
+      word-break: break-word;
+      overflow-wrap: break-word;
+    }
 
     .review-footer {
       display: flex;
@@ -1028,31 +1036,72 @@
     }
 
     @media (max-width: 768px) {
-      section { padding: 64px 0; }
+      section { padding: 56px 0; }
 
-      .hero-content  { padding: 56px 0; }
-      .hero-stats    { gap: 24px; }
+      /* Hero */
+      .hero-content  { padding: 48px 0 56px; }
+      .hero-stats    { gap: 20px; margin-top: 48px; padding-top: 32px; }
+      .hero-stat-num { font-size: 26px; }
 
-      .services-grid { grid-template-columns: repeat(2, 1fr); }
+      /* Trust bar — 2×2 grid on tablet */
+      .trust-bar-inner { display: grid; grid-template-columns: 1fr 1fr; }
+      .trust-item { border-right: none; border-bottom: 1px solid rgba(10,22,40,.14); }
+      .trust-item:nth-child(odd)  { border-right: 1px solid rgba(10,22,40,.14); }
+      .trust-item:nth-last-child(-n+2) { border-bottom: none; }
+
+      /* Services */
+      .services-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+
+      /* Reviews */
       .reviews-grid  { grid-template-columns: 1fr; }
+      .review-card   { padding: 22px; }
+
+      /* About */
       .about-grid    { grid-template-columns: 1fr; gap: 0; }
       .about-image   { margin-bottom: 40px; }
-      .about-image .ph-block { min-height: 260px; }
+      .about-image .ph-block { min-height: 240px; }
       .about-accent  { display: none; }
-      .area-grid     { grid-template-columns: 1fr; }
-      .contact-grid  { grid-template-columns: 1fr; gap: 48px; }
-      .form-row      { grid-template-columns: 1fr; }
-      .footer-grid   { grid-template-columns: 1fr; gap: 28px; }
 
-      .trust-item { padding: 18px 16px; min-width: 150px; }
-      .trust-item-text { font-size: 11px; }
+      /* Service area */
+      .area-grid { grid-template-columns: 1fr; }
+      .map-placeholder { min-height: 260px; }
+
+      /* Contact */
+      .contact-grid  { grid-template-columns: 1fr; gap: 40px; }
+      .contact-phone-big { font-size: clamp(26px, 8vw, 36px); }
+      .form-row      { grid-template-columns: 1fr; }
+
+      /* Footer */
+      .footer-grid   { grid-template-columns: 1fr 1fr; gap: 28px; }
+      .footer-bottom { flex-direction: column; align-items: flex-start; gap: 8px; }
     }
 
     @media (max-width: 480px) {
-      .services-grid { grid-template-columns: 1fr; }
+      section { padding: 48px 0; }
+      .container { padding: 0 16px; }
+
+      /* Trust bar — single column */
+      .trust-bar-inner { grid-template-columns: 1fr; }
+      .trust-item { border-right: none !important; border-bottom: 1px solid rgba(10,22,40,.14); padding: 16px 20px; }
+      .trust-item:last-child { border-bottom: none; }
+
+      /* Services */
+      .services-grid { grid-template-columns: 1fr; gap: 14px; }
+
+      /* Hero */
       .hero-ctas { flex-direction: column; }
       .hero-ctas .btn { width: 100%; justify-content: center; }
-      .contact-form  { padding: 24px 18px; }
+      .hero-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+      /* Contact form */
+      .contact-form  { padding: 22px 16px; }
+
+      /* Footer */
+      .footer-grid   { grid-template-columns: 1fr; }
+      .footer-brand p { max-width: 100%; }
+
+      /* Why grid */
+      .why-grid { grid-template-columns: 1fr; }
     }
 
     /* Reduced motion */
@@ -1449,9 +1498,9 @@
             <i data-lucide="star" aria-hidden="true"></i>
           </div>
           <p class="review-text">
-            "<span class="ph">[Replace with real Google review. Example: Brannack Electric did an
-            outstanding job upgrading our electrical panel. Professional, prompt, and fairly priced.
-            Will absolutely use them again — highly recommend to anyone in the area.]</span>"
+            "<span class="ph">[REPLACE WITH REAL REVIEW]</span> — Brannack Electric did an
+            outstanding job on our panel upgrade. Professional, prompt, and fairly priced.
+            Will absolutely use them again."
           </p>
           <div class="review-footer">
             <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
@@ -1481,9 +1530,9 @@
             <i data-lucide="star" aria-hidden="true"></i>
           </div>
           <p class="review-text">
-            "<span class="ph">[Replace with real Google review. Example: Called Brannack Electric for
-            a generator install and couldn't be happier. They were on time, clean, and explained
-            everything thoroughly. Highly recommend — great family business!]</span>"
+            "<span class="ph">[REPLACE WITH REAL REVIEW]</span> — Called them for a generator
+            install and couldn't be happier. On time, clean, and explained everything.
+            Highly recommend this family business!"
           </p>
           <div class="review-footer">
             <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
@@ -1513,9 +1562,9 @@
             <i data-lucide="star" aria-hidden="true"></i>
           </div>
           <p class="review-text">
-            "<span class="ph">[Replace with real Google review. Example: Used Brannack Electric for
-            our commercial space rewiring project. Incredibly professional — the work passed
-            inspection on the first visit. Will be using them for all future electrical needs.]</span>"
+            "<span class="ph">[REPLACE WITH REAL REVIEW]</span> — Used Brannack for our commercial
+            rewiring project. Incredibly professional — passed inspection on the first visit.
+            Will use them for all future electrical work."
           </p>
           <div class="review-footer">
             <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true">
