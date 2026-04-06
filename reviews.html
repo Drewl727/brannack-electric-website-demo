@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Customer Reviews | Brannack Electric Inc. | Bloomfield, CT Electrician</title>
+  <meta name="description" content="Read 5-star reviews for Brannack Electric Inc., Bloomfield CT's trusted electrician. BBB A+ rated, Google 5.0 stars, Nextdoor Neighborhood Favorite. Serving Hartford County since 1980." />
+  <meta name="keywords" content="Brannack Electric reviews, electrician reviews Bloomfield CT, 5 star electrician Hartford County, Connecticut electrician testimonials, best electrician Bloomfield" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Geo -->
+  <meta name="geo.region" content="US-CT" />
+  <meta name="geo.placename" content="Bloomfield, Connecticut" />
+  <meta name="geo.position" content="41.8268;-72.7307" />
+  <meta name="ICBM" content="41.8268, -72.7307" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://drewl727.github.io/brannack-electric-website-demo/reviews.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Customer Reviews | Brannack Electric Inc. | Bloomfield, CT" />
+  <meta property="og:description" content="5.0-star rated electrician in Bloomfield, CT. Read real customer reviews for Brannack Electric — BBB A+, Google 5 stars, Nextdoor Favorite." />
+  <meta property="og:url" content="https://drewl727.github.io/brannack-electric-website-demo/reviews.html" />
+  <meta property="og:image" content="https://drewl727.github.io/brannack-electric-website-demo/images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Customer Reviews | Brannack Electric Inc. | Bloomfield, CT" />
+  <meta name="twitter:description" content="5.0-star electrician in Bloomfield, CT. BBB A+, Nextdoor Favorite. Serving Hartford County since 1980." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://drewl727.github.io/brannack-electric-website-demo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Reviews",
+          "item": "https://drewl727.github.io/brannack-electric-website-demo/reviews.html"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Brannack Electric Inc.",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "bestRating": "5",
+        "ratingCount": "50"
+      }
+    }
+  ]
+  </script>
+
+  <style>
+    .rating-summary {
+      background: var(--navy);
+      padding: 64px 0;
+      position: relative;
+    }
+    .rating-summary::before {
+      content:'';position:absolute;inset:0;
+      background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80'%3E%3Cg fill='none' stroke='%23F5C518' stroke-width='0.4' stroke-opacity='0.07'%3E%3Cpath d='M40 0 L40 20 M40 60 L40 80 M0 40 L20 40 M60 40 L80 40'/%3E%3Cpath d='M40 20 L60 20 L60 40 M40 60 L20 60 L20 40'/%3E%3C/g%3E%3C/svg%3E");
+      background-repeat:repeat;background-size:80px 80px;pointer-events:none;
+    }
+
+    .rating-inner {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .rating-score {
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .rating-num {
+      font-family: var(--font-heading);
+      font-size: 88px;
+      font-weight: 900;
+      color: var(--yellow);
+      line-height: 1;
+    }
+
+    .rating-stars-lg {
+      display: flex;
+      gap: 4px;
+      justify-content: center;
+      margin: 10px 0 6px;
+    }
+    .rating-stars-lg i { width: 24px; height: 24px; fill: var(--yellow); stroke: var(--yellow); }
+
+    .rating-label {
+      font-size: 13px;
+      color: rgba(255,255,255,.5);
+      font-weight: 600;
+    }
+
+    .rating-platforms {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .platform-item {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .platform-badge {
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: var(--radius);
+      padding: 10px 16px;
+      font-family: var(--font-heading);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--white);
+      min-width: 120px;
+      text-align: center;
+    }
+
+    .platform-stars { display: flex; gap: 2px; }
+    .platform-stars i { width: 14px; height: 14px; fill: var(--yellow); stroke: var(--yellow); }
+
+    .platform-desc { font-size: 13px; color: rgba(255,255,255,.5); }
+
+    .reviews-full {
+      background: var(--off-white);
+      padding: 88px 0;
+    }
+
+    .reviews-full-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 1024px) {
+      .rating-inner { grid-template-columns: 1fr; gap: 32px; text-align: center; }
+      .rating-platforms { align-items: center; }
+    }
+
+    @media (max-width: 768px) {
+      .reviews-full-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+
+        <a href="index.html" class="nav-logo" aria-label="Brannack Electric Inc — Home">
+          <div class="nav-logo-icon" aria-hidden="true">B</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">BRANNACK ELECTRIC</span>
+            <span class="nav-logo-sub">Inc.</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="reviews.html" class="active">Reviews</a></li>
+          <li><a href="service-area.html">Service Area</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <a href="tel:8602426486" class="nav-phone" aria-label="Call (860) 242-6486">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            (860) 242-6486
+          </a>
+          <a href="contact.html" class="btn btn-primary btn-nav">Request Service</a>
+        </div>
+
+        <button class="nav-hamburger" id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+
+      </nav>
+    </div>
+
+    <div class="nav-mobile" id="mobileMenu" aria-hidden="true">
+      <a href="index.html" onclick="closeMenu()">Home</a>
+      <a href="services.html" onclick="closeMenu()">Services</a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="reviews.html" class="active" onclick="closeMenu()">Reviews</a>
+      <a href="service-area.html" onclick="closeMenu()">Service Area</a>
+      <a href="contact.html" onclick="closeMenu()">Contact</a>
+      <a href="tel:8602426486" style="display:flex;align-items:center;gap:10px;color:var(--yellow)!important;">
+        <i data-lucide="phone" aria-hidden="true" style="width:17px;height:17px;stroke:var(--yellow)"></i>
+        (860) 242-6486
+      </a>
+      <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Request Service</a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Reviews</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" aria-label="Reviews page header">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="section-label">Customer Reviews</span>
+        <h1>What Our <span class="accent">Customers Say</span></h1>
+        <p>
+          5.0 stars across platforms. See why Bloomfield and Hartford County homeowners and
+          businesses trust Brannack Electric for all their electrical needs.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- RATING SUMMARY -->
+  <section class="rating-summary" aria-labelledby="rating-heading">
+    <div class="container">
+      <div class="rating-inner">
+
+        <div class="rating-score">
+          <div class="rating-num" aria-label="5.0 out of 5 stars">5.0</div>
+          <div class="rating-stars-lg" aria-hidden="true">
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+            <i data-lucide="star"></i>
+          </div>
+          <div class="rating-label">Overall Rating</div>
+        </div>
+
+        <div class="rating-platforms" aria-label="Review platform ratings">
+          <h2 id="rating-heading" style="font-family:var(--font-heading);font-size:22px;font-weight:800;color:var(--white);margin-bottom:4px;">
+            Top-Rated Across Platforms
+          </h2>
+          <p style="font-size:15px;color:rgba(255,255,255,.58);margin-bottom:20px;">
+            Brannack Electric has earned 5-star reviews on every major platform — because doing the
+            job right speaks for itself.
+          </p>
+          <div class="platform-item">
+            <div class="platform-badge">Google</div>
+            <div class="platform-stars" aria-label="5 stars on Google">
+              <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              <i data-lucide="star"></i><i data-lucide="star"></i>
+            </div>
+            <span class="platform-desc">5.0 stars</span>
+          </div>
+          <div class="platform-item">
+            <div class="platform-badge">BBB</div>
+            <div class="platform-stars" aria-hidden="true">
+              <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              <i data-lucide="star"></i><i data-lucide="star"></i>
+            </div>
+            <span class="platform-desc">A+ Accredited Business</span>
+          </div>
+          <div class="platform-item">
+            <div class="platform-badge">Nextdoor</div>
+            <div class="platform-stars" aria-hidden="true">
+              <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              <i data-lucide="star"></i><i data-lucide="star"></i>
+            </div>
+            <span class="platform-desc">Neighborhood Favorite</span>
+          </div>
+          <div class="platform-item">
+            <div class="platform-badge">BuildZoom</div>
+            <div class="platform-stars" aria-hidden="true">
+              <i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i>
+              <i data-lucide="star"></i><i data-lucide="star"></i>
+            </div>
+            <span class="platform-desc">Top 4% in Connecticut</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REVIEWS GRID -->
+  <section class="reviews-full" aria-labelledby="reviews-grid-heading">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Testimonials</span>
+        <h2 class="section-title" id="reviews-grid-heading">Customer Testimonials</h2>
+        <p class="section-subtitle">
+          Real reviews from real customers across Bloomfield, West Hartford, Windsor, and Hartford County.
+          <span class="ph">[Replace placeholder reviews with real reviews from Tim]</span>
+        </p>
+      </div>
+
+      <div class="reviews-full-grid">
+
+        <!-- Review 1 -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">J</div>
+            <div>
+              <div class="review-name">John M.</div>
+              <div class="review-meta"><span class="ph">[Bloomfield, CT]</span> · Panel Upgrade</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+          </div>
+          <p class="review-text">"<span class="ph">[REPLACE WITH REAL REVIEW]</span> — Brannack Electric did an outstanding job on our panel upgrade. Professional, prompt, and fairly priced. Will absolutely use them again."</p>
+          <div class="review-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Google Review
+          </div>
+        </article>
+
+        <!-- Review 2 -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">S</div>
+            <div>
+              <div class="review-name">Sarah T.</div>
+              <div class="review-meta"><span class="ph">[West Hartford, CT]</span> · Generator Install</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+          </div>
+          <p class="review-text">"<span class="ph">[REPLACE WITH REAL REVIEW]</span> — Called them for a generator install and couldn't be happier. On time, clean, and explained everything. Highly recommend this family business!"</p>
+          <div class="review-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Google Review
+          </div>
+        </article>
+
+        <!-- Review 3 -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true">M</div>
+            <div>
+              <div class="review-name">Mike R.</div>
+              <div class="review-meta"><span class="ph">[Windsor, CT]</span> · Commercial Rewiring</div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+          </div>
+          <p class="review-text">"<span class="ph">[REPLACE WITH REAL REVIEW]</span> — Used Brannack for our commercial rewiring project. Incredibly professional — passed inspection on the first visit. Will use them for all future electrical work."</p>
+          <div class="review-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Google Review
+          </div>
+        </article>
+
+        <!-- Review 4 Placeholder -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true"><span class="ph" style="background:transparent;color:var(--yellow);font-size:18px;">?</span></div>
+            <div>
+              <div class="review-name"><span class="ph">[REVIEWER NAME]</span></div>
+              <div class="review-meta"><span class="ph">[Town, CT]</span> · <span class="ph">[Service]</span></div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+          </div>
+          <p class="review-text">"<span class="ph">[REPLACE WITH REAL REVIEW FROM TIM]</span>"</p>
+          <div class="review-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Google Review
+          </div>
+        </article>
+
+        <!-- Review 5 Placeholder -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true"><span class="ph" style="background:transparent;color:var(--yellow);font-size:18px;">?</span></div>
+            <div>
+              <div class="review-name"><span class="ph">[REVIEWER NAME]</span></div>
+              <div class="review-meta"><span class="ph">[Town, CT]</span> · <span class="ph">[Service]</span></div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+          </div>
+          <p class="review-text">"<span class="ph">[REPLACE WITH REAL REVIEW FROM TIM]</span>"</p>
+          <div class="review-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Google Review
+          </div>
+        </article>
+
+        <!-- Review 6 Placeholder -->
+        <article class="review-card">
+          <div class="review-header">
+            <div class="review-avatar" aria-hidden="true"><span class="ph" style="background:transparent;color:var(--yellow);font-size:18px;">?</span></div>
+            <div>
+              <div class="review-name"><span class="ph">[REVIEWER NAME]</span></div>
+              <div class="review-meta"><span class="ph">[Town, CT]</span> · <span class="ph">[Service]</span></div>
+            </div>
+          </div>
+          <div class="review-stars" aria-label="5 out of 5 stars">
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i><i data-lucide="star" aria-hidden="true"></i>
+            <i data-lucide="star" aria-hidden="true"></i>
+          </div>
+          <p class="review-text">"<span class="ph">[REPLACE WITH REAL REVIEW FROM TIM]</span>"</p>
+          <div class="review-footer">
+            <svg width="14" height="14" viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
+            Google Review
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner" role="complementary" aria-label="Call to action">
+    <div class="container">
+      <div class="cta-banner-inner">
+        <div>
+          <h2>Join Our 5-Star Customers</h2>
+          <p>Experience the Brannack Electric difference. Get a free estimate today — no pressure, no obligation.</p>
+        </div>
+        <div class="cta-banner-btns">
+          <a href="tel:8602426486" class="btn btn-navy">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            (860) 242-6486
+          </a>
+          <a href="contact.html" class="btn btn-navy">
+            Free Estimate
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="Brannack Electric Inc — Home">
+            <div class="nav-logo-icon" aria-hidden="true">B</div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">BRANNACK ELECTRIC</span>
+              <span class="nav-logo-sub">Inc.</span>
+            </div>
+          </a>
+          <p>Family-owned electrical contractor serving Hartford County since 1980. Licensed, insured, and committed to quality work.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="service-area.html">Service Area</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="services.html#panel-installation">Panel Installation</a></li>
+            <li><a href="services.html#panel-repair">Panel Repair</a></li>
+            <li><a href="services.html#generator-installation">Generator Install</a></li>
+            <li><a href="services.html#wire-installation">Wire Installation</a></li>
+            <li><a href="services.html#electric-inspection">Inspections</a></li>
+            <li><a href="contact.html">Emergency Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            <a href="tel:8602426486" style="color:rgba(255,255,255,.5);transition:color .2s ease;">(860) 242-6486</a>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <span>37 Tunxis Ave<br>Bloomfield, CT 06002</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="clock" aria-hidden="true"></i>
+            <span>Mon–Fri 7:00 AM – 5:00 PM<br>24/7 Emergency Service</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Brannack Electric Inc. All rights reserved. CT License #ELC.0103859-E1</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+    const hamburger  = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+    });
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target)) closeMenu();
+    });
+  </script>
+
+</body>
+</html>

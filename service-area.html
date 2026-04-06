@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Service Area | Brannack Electric Inc. | Bloomfield, CT Electrician</title>
+  <meta name="description" content="Brannack Electric serves Bloomfield, West Hartford, Hartford, Windsor, Simsbury, Granby, Avon, Canton, South Windsor &amp; all of Hartford County, CT. Licensed electrician since 1980." />
+  <meta name="keywords" content="electrician Hartford County CT, electrician Bloomfield CT, electrician West Hartford, electrician Windsor CT, electrician Simsbury CT, electrician Granby CT, electrician Avon CT, electrician Canton CT" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Geo -->
+  <meta name="geo.region" content="US-CT" />
+  <meta name="geo.placename" content="Bloomfield, Connecticut" />
+  <meta name="geo.position" content="41.8268;-72.7307" />
+  <meta name="ICBM" content="41.8268, -72.7307" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://drewl727.github.io/brannack-electric-website-demo/service-area.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Service Area | Brannack Electric Inc. | Bloomfield, CT Electrician" />
+  <meta property="og:description" content="Licensed electrician serving Bloomfield, West Hartford, Hartford, Windsor, Simsbury, Granby, Avon, Canton &amp; all of Hartford County, CT since 1980." />
+  <meta property="og:url" content="https://drewl727.github.io/brannack-electric-website-demo/service-area.html" />
+  <meta property="og:image" content="https://drewl727.github.io/brannack-electric-website-demo/images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Service Area | Brannack Electric Inc. | Bloomfield, CT" />
+  <meta name="twitter:description" content="Serving Bloomfield, West Hartford, Hartford, Windsor, Simsbury &amp; all of Hartford County, CT. Licensed electrician since 1980." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://drewl727.github.io/brannack-electric-website-demo/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Service Area",
+        "item": "https://drewl727.github.io/brannack-electric-website-demo/service-area.html"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .area-towns-full {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 32px;
+    }
+
+    .area-town-card {
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: border-color var(--ease), box-shadow var(--ease);
+    }
+    .area-town-card:hover { border-color: var(--yellow); box-shadow: var(--shadow-sm); }
+
+    .area-town-card i { stroke: var(--yellow); width: 18px; height: 18px; flex-shrink: 0; }
+
+    .area-town-name {
+      font-family: var(--font-heading);
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--navy);
+    }
+
+    .area-town-label {
+      font-size: 11px;
+      color: var(--gray-400);
+      font-weight: 600;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .area-town-primary .area-town-name { color: var(--navy); }
+    .area-town-primary { border-color: var(--yellow); background: rgba(245,197,24,.04); }
+    .area-town-primary .area-town-label { color: var(--yellow-dark); }
+
+    @media (max-width: 768px) {
+      .area-towns-full { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @media (max-width: 480px) {
+      .area-towns-full { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+
+        <a href="index.html" class="nav-logo" aria-label="Brannack Electric Inc — Home">
+          <div class="nav-logo-icon" aria-hidden="true">B</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">BRANNACK ELECTRIC</span>
+            <span class="nav-logo-sub">Inc.</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="service-area.html" class="active">Service Area</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <a href="tel:8602426486" class="nav-phone" aria-label="Call (860) 242-6486">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            (860) 242-6486
+          </a>
+          <a href="contact.html" class="btn btn-primary btn-nav">Request Service</a>
+        </div>
+
+        <button class="nav-hamburger" id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+
+      </nav>
+    </div>
+
+    <div class="nav-mobile" id="mobileMenu" aria-hidden="true">
+      <a href="index.html" onclick="closeMenu()">Home</a>
+      <a href="services.html" onclick="closeMenu()">Services</a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="reviews.html" onclick="closeMenu()">Reviews</a>
+      <a href="service-area.html" class="active" onclick="closeMenu()">Service Area</a>
+      <a href="contact.html" onclick="closeMenu()">Contact</a>
+      <a href="tel:8602426486" style="display:flex;align-items:center;gap:10px;color:var(--yellow)!important;">
+        <i data-lucide="phone" aria-hidden="true" style="width:17px;height:17px;stroke:var(--yellow)"></i>
+        (860) 242-6486
+      </a>
+      <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Request Service</a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">Service Area</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" aria-label="Service area page header">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="section-label">Where We Work</span>
+        <h1>We Serve <span class="accent">Hartford County</span></h1>
+        <p>
+          Brannack Electric is based in Bloomfield, CT and has proudly served the entire
+          Hartford County area — and surrounding communities — for over 45 years.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- SERVICE AREA DETAIL -->
+  <section class="service-area" id="service-area" aria-labelledby="area-heading">
+    <div class="container">
+
+      <div class="text-center">
+        <span class="section-label">Coverage Area</span>
+        <h2 class="section-title" id="area-heading">Towns We Serve</h2>
+        <p class="section-subtitle">
+          From our home base in Bloomfield, we serve all of Hartford County and surrounding communities.
+          Not sure if we come to you? Just call — we're happy to confirm.
+        </p>
+      </div>
+
+      <!-- Town Cards -->
+      <ul class="area-towns-full" aria-label="Towns served by Brannack Electric">
+
+        <li class="area-town-card area-town-primary">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">Bloomfield, CT</div>
+            <div class="area-town-label">Primary Location</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">West Hartford, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">Hartford, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">Windsor, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">Simsbury, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">Windsor Locks, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">Granby, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">East Granby, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">Avon, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">South Windsor, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">East Hartford, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+        <li class="area-town-card">
+          <i data-lucide="map-pin" aria-hidden="true"></i>
+          <div>
+            <div class="area-town-name">Canton, CT</div>
+            <div class="area-town-label">Hartford County</div>
+          </div>
+        </li>
+
+      </ul>
+
+      <p class="area-note" style="text-align:center;margin-bottom:40px;">
+        + surrounding Hartford County towns — call to confirm your area: <a href="tel:8602426486" style="color:var(--navy);font-weight:700;">(860) 242-6486</a>
+      </p>
+
+      <!-- Map -->
+      <div class="area-grid">
+        <div>
+          <h3 style="font-family:var(--font-heading);font-size:22px;font-weight:800;color:var(--navy);margin-bottom:16px;">
+            Our Office
+          </h3>
+          <div class="contact-info-block" style="margin-bottom:16px;">
+            <div class="contact-info-icon" style="background:rgba(10,22,40,.06);">
+              <i data-lucide="map-pin" aria-hidden="true" style="stroke:var(--navy);"></i>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);margin-bottom:5px;">Address</div>
+              <div style="color:var(--gray-900);font-size:16px;font-weight:600;line-height:1.58;">
+                37 Tunxis Ave<br>Bloomfield, CT 06002
+              </div>
+            </div>
+          </div>
+          <div class="contact-info-block" style="margin-bottom:16px;">
+            <div class="contact-info-icon" style="background:rgba(10,22,40,.06);">
+              <i data-lucide="phone" aria-hidden="true" style="stroke:var(--navy);"></i>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);margin-bottom:5px;">Phone</div>
+              <a href="tel:8602426486" style="color:var(--navy);font-size:16px;font-weight:700;">(860) 242-6486</a>
+            </div>
+          </div>
+          <div class="contact-info-block">
+            <div class="contact-info-icon" style="background:rgba(10,22,40,.06);">
+              <i data-lucide="clock" aria-hidden="true" style="stroke:var(--navy);"></i>
+            </div>
+            <div>
+              <div style="font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--gray-400);margin-bottom:5px;">Hours</div>
+              <div style="color:var(--gray-900);font-size:15px;line-height:1.6;">
+                Mon – Fri: 7:00 AM – 5:00 PM<br>
+                <strong style="color:var(--navy);">24/7 Emergency Service Available</strong>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top:28px;">
+            <a href="contact.html" class="btn btn-navy">
+              <i data-lucide="phone" aria-hidden="true"></i>
+              Check Your Area — (860) 242-6486
+            </a>
+          </div>
+        </div>
+
+        <!-- Map placeholder -->
+        <div class="map-placeholder" role="img" aria-label="Map embed placeholder — 37 Tunxis Ave, Bloomfield, CT">
+          <i data-lucide="map" aria-hidden="true"></i>
+          <span class="ph">[MAP EMBED PLACEHOLDER]</span>
+          <p>
+            Replace with a Google Maps embed centered on<br>
+            37 Tunxis Ave, Bloomfield, CT 06002<br><br>
+            <em>Embed code: Google Maps → Share → Embed a map</em>
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- WHY LOCAL MATTERS -->
+  <section class="why" aria-labelledby="local-heading">
+    <div class="container">
+      <div class="text-center" style="position:relative;z-index:1;">
+        <span class="section-label">Local Advantage</span>
+        <h2 class="section-title" id="local-heading">Why Local Matters</h2>
+        <p class="section-subtitle">
+          We know Hartford County's neighborhoods, building codes, and inspection requirements.
+          That local knowledge saves you time and money.
+        </p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="map" aria-hidden="true"></i></div>
+          <h3>We Know the Area</h3>
+          <p>Based in Bloomfield since 1980, we know Hartford County's neighborhoods, code requirements, and local inspectors.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="timer" aria-hidden="true"></i></div>
+          <h3>Fast Response Times</h3>
+          <p>Our local base means we can respond quickly — often same day — throughout Hartford County.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="users" aria-hidden="true"></i></div>
+          <h3>Community Trusted</h3>
+          <p>Nextdoor Neighborhood Favorite, BBB A+, Google 5 stars. Our neighbors trust us — and that means everything.</p>
+        </div>
+        <div class="why-card">
+          <div class="why-icon"><i data-lucide="zap" aria-hidden="true"></i></div>
+          <h3>24/7 Emergency</h3>
+          <p>Electrical emergencies don't wait for business hours. We're available around the clock for urgent situations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-banner" role="complementary" aria-label="Call to action">
+    <div class="container">
+      <div class="cta-banner-inner">
+        <div>
+          <h2>Not Sure if We Cover Your Area?</h2>
+          <p>Give us a call — we serve most of Hartford County and are happy to confirm coverage for your location.</p>
+        </div>
+        <div class="cta-banner-btns">
+          <a href="tel:8602426486" class="btn btn-navy">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            (860) 242-6486
+          </a>
+          <a href="contact.html" class="btn btn-navy">
+            Free Estimate
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="Brannack Electric Inc — Home">
+            <div class="nav-logo-icon" aria-hidden="true">B</div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">BRANNACK ELECTRIC</span>
+              <span class="nav-logo-sub">Inc.</span>
+            </div>
+          </a>
+          <p>Family-owned electrical contractor serving Hartford County since 1980. Licensed, insured, and committed to quality work.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="service-area.html">Service Area</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="services.html#panel-installation">Panel Installation</a></li>
+            <li><a href="services.html#panel-repair">Panel Repair</a></li>
+            <li><a href="services.html#generator-installation">Generator Install</a></li>
+            <li><a href="services.html#wire-installation">Wire Installation</a></li>
+            <li><a href="services.html#electric-inspection">Inspections</a></li>
+            <li><a href="contact.html">Emergency Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            <a href="tel:8602426486" style="color:rgba(255,255,255,.5);transition:color .2s ease;">(860) 242-6486</a>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <span>37 Tunxis Ave<br>Bloomfield, CT 06002</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="clock" aria-hidden="true"></i>
+            <span>Mon–Fri 7:00 AM – 5:00 PM<br>24/7 Emergency Service</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Brannack Electric Inc. All rights reserved. CT License #ELC.0103859-E1</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+    const hamburger  = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+    });
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target)) closeMenu();
+    });
+  </script>
+
+</body>
+</html>
