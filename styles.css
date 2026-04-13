@@ -395,7 +395,6 @@ section { padding: 88px 0; }
   padding: 72px 0;
 }
 
-
 .trust-badges {
   display: flex;
   gap: 8px;
@@ -409,6 +408,7 @@ section { padding: 88px 0; }
   gap: 7px;
   background: rgba(255,255,255,.1);
   border: 1px solid rgba(255,255,255,.2);
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   padding: 6px 13px;
   border-radius: 4px;
