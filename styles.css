@@ -390,31 +390,38 @@ section { padding: 88px 0; }
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 620px;
+  margin: 0;
   padding: 72px 0;
-  text-align: center;
 }
 
-.hero-sub { margin-left: auto; margin-right: auto; }
-.hero-ctas { justify-content: center; }
-.hero-stats { justify-content: center; }
 
-.hero-badge {
+.trust-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+
+.badge {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  background: rgba(245,197,24,.1);
-  border: 1px solid rgba(245,197,24,.28);
-  color: var(--yellow);
-  padding: 8px 16px;
-  border-radius: 24px;
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: .04em;
-  margin-bottom: 28px;
+  gap: 7px;
+  background: rgba(255,255,255,.1);
+  border: 1px solid rgba(255,255,255,.2);
+  backdrop-filter: blur(8px);
+  padding: 6px 13px;
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--white);
+  letter-spacing: .05em;
+  text-transform: uppercase;
 }
-.hero-badge i { width: 14px; height: 14px; stroke: var(--yellow); }
+
+.badge-check {
+  color: var(--yellow);
+}
 
 .hero-headline {
   font-family: var(--font-heading);
