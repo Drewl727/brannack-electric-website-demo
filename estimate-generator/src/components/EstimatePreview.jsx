@@ -16,7 +16,7 @@ export default function EstimatePreview({ status, estimate, rawError, onRetry, o
   const docRef = useRef(null)
 
   async function handleDownload() {
-    await downloadPDF(docRef, estimate?.estimateNumber)
+    await downloadPDF(docRef, estimate?.estimateNumber, estimate?.clientName)
   }
 
   return (
