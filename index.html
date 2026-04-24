@@ -181,55 +181,135 @@
   <section class="hero" id="hero" aria-label="Introduction">
     <div class="container">
       <div class="hero-content">
+        <div class="hero-split">
 
-        <div class="trust-badges">
-          <div class="trust-badge"><span class="trust-badge-check">✓</span> Licensed &amp; Insured</div>
-          <div class="trust-badge"><span class="trust-badge-check">✓</span> 45+ Years Experience</div>
-          <div class="trust-badge"><span class="trust-badge-check">✓</span> 24/7 Emergency Service</div>
-          <div class="trust-badge"><span class="trust-badge-check">✓</span> Upfront pricing — no hidden fees</div>
-          <div class="trust-badge"><span class="trust-badge-check">✓</span> Family-owned since 1980</div>
+          <!-- LEFT: headline + stats -->
+          <div class="hero-left">
+
+            <div class="trust-badges">
+              <div class="trust-badge"><span class="trust-badge-check">✓</span> Licensed &amp; Insured</div>
+              <div class="trust-badge"><span class="trust-badge-check">✓</span> 45+ Years Experience</div>
+              <div class="trust-badge"><span class="trust-badge-check">✓</span> 24/7 Emergency Service</div>
+              <div class="trust-badge"><span class="trust-badge-check">✓</span> Upfront pricing — no hidden fees</div>
+              <div class="trust-badge"><span class="trust-badge-check">✓</span> Family-owned since 1980</div>
+            </div>
+
+            <h1 class="hero-headline">
+              Licensed electricians<br>
+              <span class="accent">you can count on —</span><br>
+              day or night.
+            </h1>
+
+            <p class="hero-sub">
+              Brannack Electric, Inc. has been the name homeowners and businesses in Bloomfield trust since 1980. Whether it's a single outlet or a full panel upgrade, our licensed electricians handle it safely, on schedule, and at a fair price.
+            </p>
+
+            <div class="hero-ctas">
+              <a href="tel:8602426486" class="btn btn-primary" aria-label="Call now: (860) 242-6486">
+                <i data-lucide="phone" aria-hidden="true"></i>
+                Call (860) 242-6486
+              </a>
+              <a href="services.html" class="btn btn-outline">
+                Our Services
+                <i data-lucide="chevron-right" aria-hidden="true"></i>
+              </a>
+            </div>
+
+            <div class="hero-stats" aria-label="Key figures">
+              <div class="hero-stat">
+                <div class="hero-stat-num">45+</div>
+                <div class="hero-stat-label">Years in Business</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">5.0</div>
+                <div class="hero-stat-label">Google Rating</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">24/7</div>
+                <div class="hero-stat-label">Emergency Service</div>
+              </div>
+              <div class="hero-stat">
+                <div class="hero-stat-num">424+</div>
+                <div class="hero-stat-label">Permitted Projects</div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- RIGHT: contact form panel -->
+          <div class="hero-form-panel" aria-label="Quick contact form">
+            <h3>How Can We Help You</h3>
+            <!--
+              TO ENABLE FORMSPREE: replace action="#" with your Formspree URL
+              and remove onsubmit="handleHeroSubmit(event)"
+            -->
+            <form id="heroForm" action="#" method="POST"
+                  onsubmit="handleHeroSubmit(event)" novalidate>
+
+              <div class="hero-form-row">
+                <div class="form-group">
+                  <input type="text" name="first_name"
+                         placeholder="First Name"
+                         autocomplete="given-name" />
+                </div>
+                <div class="form-group">
+                  <input type="text" name="last_name"
+                         placeholder="Last Name"
+                         autocomplete="family-name" />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <input type="tel" name="phone"
+                       placeholder="Phone"
+                       required autocomplete="tel" />
+              </div>
+
+              <div class="form-group">
+                <input type="email" name="email"
+                       placeholder="Email"
+                       autocomplete="email" />
+              </div>
+
+              <div class="form-group">
+                <input type="text" name="town"
+                       placeholder="Town / City"
+                       autocomplete="address-level2" />
+              </div>
+
+              <div class="form-group">
+                <select name="service">
+                  <option value="" disabled selected>Interested In?</option>
+                  <option value="residential-wiring">Residential wiring</option>
+                  <option value="panel-upgrade">Panel upgrade or replacement</option>
+                  <option value="lighting">Lighting installation</option>
+                  <option value="ev-charger">EV charger installation</option>
+                  <option value="outlets-switches">Outlets &amp; switches</option>
+                  <option value="generator">Generator installation</option>
+                  <option value="emergency">Emergency service</option>
+                  <option value="other">Other / not sure</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <textarea name="message"
+                  placeholder="How can we help?"></textarea>
+              </div>
+
+              <button type="submit" id="heroSubmitBtn" class="btn btn-navy"
+                      style="width:100%;justify-content:center;padding:14px;font-size:14px;letter-spacing:.07em;text-transform:uppercase;">
+                Submit
+              </button>
+
+              <div id="hero-form-success"
+                   style="display:none;margin-top:12px;background:rgba(10,22,40,.1);color:var(--navy);padding:10px 14px;border-radius:var(--radius);font-size:13px;font-weight:700;text-align:center;">
+                Got it — we'll be in touch shortly!
+              </div>
+
+            </form>
+          </div>
+
         </div>
-
-        <h1 class="hero-headline">
-          Licensed electricians<br>
-          <span class="accent">you can count on —</span><br>
-          day or night.
-        </h1>
-
-        <p class="hero-sub">
-          Brannack Electric, Inc. has been the name homeowners and businesses in Bloomfield trust since 1980. Whether it's a single outlet or a full panel upgrade, our licensed electricians handle it safely, on schedule, and at a fair price.
-        </p>
-
-        <div class="hero-ctas">
-          <a href="tel:8602426486" class="btn btn-primary" aria-label="Call now: (860) 242-6486">
-            <i data-lucide="phone" aria-hidden="true"></i>
-            Call (860) 242-6486
-          </a>
-          <a href="services.html" class="btn btn-outline">
-            Our Services
-            <i data-lucide="chevron-right" aria-hidden="true"></i>
-          </a>
-        </div>
-
-        <div class="hero-stats" aria-label="Key figures">
-          <div class="hero-stat">
-            <div class="hero-stat-num">45+</div>
-            <div class="hero-stat-label">Years in Business</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num">5.0</div>
-            <div class="hero-stat-label">Google Rating</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num">24/7</div>
-            <div class="hero-stat-label">Emergency Service</div>
-          </div>
-          <div class="hero-stat">
-            <div class="hero-stat-num">424+</div>
-            <div class="hero-stat-label">Permitted Projects</div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -679,6 +759,21 @@
     document.addEventListener('click', e => {
       if (!nav.contains(e.target)) closeMenu();
     });
+
+    function handleHeroSubmit(e) {
+      e.preventDefault();
+      const btn     = document.getElementById('heroSubmitBtn');
+      const success = document.getElementById('hero-form-success');
+      btn.disabled = true;
+      btn.innerHTML = '<i data-lucide="loader-2" style="width:16px;height:16px;" class="spin"></i> Sending…';
+      lucide.createIcons();
+      setTimeout(() => {
+        success.style.display = 'block';
+        e.target.reset();
+        btn.disabled = false;
+        btn.textContent = 'Submit';
+      }, 1300);
+    }
 
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', function(e) {
