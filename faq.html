@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Primary SEO -->
+  <title>Electrical FAQ | Brannack Electric Inc. | Bloomfield, CT</title>
+  <meta name="description" content="Common electrical questions answered by Brannack Electric Inc., licensed electricians in Bloomfield, CT. Outlets, breakers, GFCI, flickering lights, and when to call an electrician." />
+  <meta name="keywords" content="electrical FAQ, electrician questions Bloomfield CT, GFCI outlet, circuit breaker tripping, flickering lights, electrical safety Hartford County" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Geo -->
+  <meta name="geo.region" content="US-CT" />
+  <meta name="geo.placename" content="Bloomfield, Connecticut" />
+  <meta name="geo.position" content="41.8268;-72.7307" />
+  <meta name="ICBM" content="41.8268, -72.7307" />
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://drewl727.github.io/brannack-electric-website-demo/faq.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Electrical FAQ | Brannack Electric Inc. | Bloomfield, CT" />
+  <meta property="og:description" content="Answers to common electrical questions from a licensed CT electrician. Outlets, breakers, GFCI, and when to call." />
+  <meta property="og:url" content="https://drewl727.github.io/brannack-electric-website-demo/faq.html" />
+  <meta property="og:image" content="https://drewl727.github.io/brannack-electric-website-demo/images/og-image.jpg" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Electrical FAQ | Brannack Electric Inc. | Bloomfield, CT" />
+  <meta name="twitter:description" content="Answers to common electrical questions from a licensed CT electrician." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://drewl727.github.io/brannack-electric-website-demo/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "FAQ",
+          "item": "https://drewl727.github.io/brannack-electric-website-demo/faq.html"
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Why is my outlet not working?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A dead outlet is most often caused by a tripped GFCI outlet somewhere else on the same circuit, a tripped breaker, or a loose wire connection. Start by checking nearby GFCI outlets (bathrooms, kitchens, garages) — they have a Reset button. If resetting doesn't help, check your breaker panel. If the breaker is fine and the outlet still won't work, there may be a wiring issue that needs a licensed electrician."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is a GFCI outlet?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A GFCI (Ground Fault Circuit Interrupter) outlet is a safety device that monitors the flow of current. If it detects even a small imbalance — which can indicate electricity is taking a path through a person — it trips instantly to prevent shock. GFCI outlets are required by code in bathrooms, kitchens, garages, outdoors, and near water. They have two small buttons labeled Test and Reset."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why does my outlet spark when I plug something in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A very brief, small spark when plugging something in is generally normal — it's the electrical current making contact. However, a large, persistent, or repeated spark is not normal and can indicate a loose wiring connection, an overloaded outlet, or a faulty outlet that needs replacement. Don't ignore it — call an electrician to inspect it."
+          }
+        }
+      ]
+    }
+  ]
+  </script>
+
+  <style>
+    .faq-list { display: flex; flex-direction: column; gap: 0; border: 1px solid var(--gray-200); border-radius: var(--radius-lg); overflow: hidden; }
+    .faq-item { border-bottom: 1px solid var(--gray-200); }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 22px 28px;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      cursor: pointer;
+      font-family: var(--font-heading);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--navy);
+      transition: background var(--ease);
+    }
+    .faq-question:hover { background: var(--off-white); }
+    .faq-question[aria-expanded="true"] { background: var(--off-white); color: var(--yellow-dark); }
+    .faq-question i { stroke: var(--navy); width: 20px; height: 20px; flex-shrink: 0; transition: transform .2s ease; }
+    .faq-question[aria-expanded="true"] i { transform: rotate(180deg); stroke: var(--yellow-dark); }
+    .faq-answer { display: none; padding: 0 28px 24px; }
+    .faq-answer.open { display: block; }
+    .faq-answer p { font-size: 15px; color: var(--gray-600); line-height: 1.78; }
+
+    .emergency-list {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      margin-top: 32px;
+    }
+    .emergency-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 18px 22px;
+      background: var(--white);
+      border: 1px solid var(--gray-200);
+      border-left: 4px solid #e53e3e;
+      border-radius: var(--radius);
+    }
+    .emergency-item i { stroke: #e53e3e; width: 20px; height: 20px; flex-shrink: 0; margin-top: 1px; }
+    .emergency-item p { font-size: 15px; color: var(--gray-900); font-weight: 500; line-height: 1.5; }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="nav" id="nav" role="banner">
+    <div class="container">
+      <nav class="nav-inner" aria-label="Main navigation">
+
+        <a href="index.html" class="nav-logo" aria-label="Brannack Electric Inc — Home">
+          <div class="nav-logo-icon" aria-hidden="true">B</div>
+          <div class="nav-logo-text">
+            <span class="nav-logo-name">BRANNACK ELECTRIC</span>
+            <span class="nav-logo-sub">Inc.</span>
+          </div>
+        </a>
+
+        <ul class="nav-links" role="list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="service-area.html">Service Area</a></li>
+          <li><a href="generator.html">Generator</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="nav-right">
+          <a href="tel:8602426486" class="nav-phone" aria-label="Call (860) 242-6486">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            (860) 242-6486
+          </a>
+          <a href="contact.html" class="btn btn-primary btn-nav">Request Service</a>
+        </div>
+
+        <button class="nav-hamburger" id="hamburger"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu">
+          <i data-lucide="menu" aria-hidden="true"></i>
+        </button>
+
+      </nav>
+    </div>
+
+    <div class="nav-mobile" id="mobileMenu" aria-hidden="true">
+      <a href="index.html" onclick="closeMenu()">Home</a>
+      <a href="services.html" onclick="closeMenu()">Services</a>
+      <a href="about.html" onclick="closeMenu()">About</a>
+      <a href="reviews.html" onclick="closeMenu()">Reviews</a>
+      <a href="service-area.html" onclick="closeMenu()">Service Area</a>
+      <a href="generator.html" onclick="closeMenu()">Generator</a>
+      <a href="faq.html" class="active" onclick="closeMenu()">FAQ</a>
+      <a href="contact.html" onclick="closeMenu()">Contact</a>
+      <a href="tel:8602426486" style="display:flex;align-items:center;gap:10px;color:var(--yellow)!important;">
+        <i data-lucide="phone" aria-hidden="true" style="width:17px;height:17px;stroke:var(--yellow)"></i>
+        (860) 242-6486
+      </a>
+      <a href="contact.html" class="btn btn-primary" onclick="closeMenu()">Request Service</a>
+    </div>
+  </header>
+
+  <!-- BREADCRUMB -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="container">
+      <ol class="breadcrumb-list">
+        <li><a href="index.html">Home</a></li>
+        <li aria-current="page">FAQ</li>
+      </ol>
+    </div>
+  </nav>
+
+  <main id="main-content">
+
+  <!-- PAGE HERO -->
+  <div class="page-hero" aria-label="FAQ page header">
+    <div class="container">
+      <div class="page-hero-content">
+        <span class="section-label">Common Questions</span>
+        <h1>Electrical <span class="accent">FAQ</span></h1>
+        <p>
+          Answers to the questions we hear most often — from outlets that stopped working
+          to breakers that keep tripping. When in doubt, call us.
+        </p>
+        <a href="tel:8602426486" class="btn btn-primary">
+          <i data-lucide="phone" aria-hidden="true"></i>
+          Call (860) 242-6486
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- FAQ SECTION -->
+  <section style="background:var(--white);padding:88px 0;" aria-labelledby="faq-main-heading">
+    <div class="container">
+      <div class="text-center">
+        <span class="section-label">Answers from a Licensed Electrician</span>
+        <h2 class="section-title" id="faq-main-heading">Frequently Asked Questions</h2>
+        <p class="section-subtitle">
+          If you don't see your question here, give us a call — we're always happy to help.
+        </p>
+      </div>
+
+      <div class="faq-list" style="max-width:860px;margin:40px auto 0;">
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-1">
+            Why is my outlet not working?
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer" id="faq-1">
+            <p>A dead outlet is most often caused by a tripped GFCI outlet somewhere else on the same circuit, a tripped breaker, or a loose wire connection. Start by checking nearby GFCI outlets (bathrooms, kitchens, garages) — they have a Reset button. If resetting doesn't help, check your breaker panel. If the breaker is fine and the outlet still won't work, there may be a wiring issue that needs a licensed electrician.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-2">
+            What is a GFCI outlet?
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer" id="faq-2">
+            <p>A GFCI (Ground Fault Circuit Interrupter) outlet is a safety device that monitors the flow of current. If it detects even a small imbalance — which can indicate electricity is taking a path through a person — it trips instantly to prevent shock. GFCI outlets are required by code in bathrooms, kitchens, garages, outdoors, and near water. They have two small buttons labeled Test and Reset.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-3">
+            Why does my outlet spark when I plug something in?
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer" id="faq-3">
+            <p>A very brief, small spark when plugging something in is generally normal — it's the electrical current making contact. However, a large, persistent, or repeated spark is not normal and can indicate a loose wiring connection, an overloaded outlet, or a faulty outlet that needs replacement. Don't ignore it — call an electrician to inspect it.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-4">
+            Why is my light switch warm to the touch?
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer" id="faq-4">
+            <p>A light switch that feels warm is a warning sign. It can indicate a loose wire connection, an overloaded circuit, a failing switch, or — in older homes — aluminum wiring that needs attention. Some warmth is possible with dimmer switches under heavy load, but any switch that feels hot should be inspected by a licensed electrician promptly.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-5">
+            Why do my lights flicker?
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer" id="faq-5">
+            <p>Occasional flickering when a large appliance starts (like an AC unit or refrigerator) is fairly normal due to a momentary voltage drop. But persistent flickering, flickering in multiple rooms, or flickering that coincides with burning smells or breaker trips points to a more serious issue — loose wiring, a failing connection at the panel, or an overloaded circuit. These warrant a professional inspection.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-6">
+            Can I use a higher wattage bulb in my fixture?
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer" id="faq-6">
+            <p>No — always use a bulb at or below the wattage rating listed on the fixture. Exceeding the rated wattage generates excess heat that can damage the socket, melt insulation on the wiring, and create a fire hazard. If you need more light, consider switching to LED bulbs, which produce the same or more light output at much lower wattage.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-7">
+            Why does my circuit breaker keep tripping?
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer" id="faq-7">
+            <p>A breaker that trips repeatedly is doing its job — but the underlying cause needs to be addressed. Common reasons include an overloaded circuit (too many appliances drawing power), a short circuit in a device or wiring, a ground fault, or a failing breaker. If moving devices to different circuits doesn't solve it, call an electrician. Repeatedly resetting a tripping breaker without finding the cause is a fire risk.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question" aria-expanded="false" aria-controls="faq-8">
+            How do I reset a tripped breaker?
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+          <div class="faq-answer" id="faq-8">
+            <p>Open your breaker panel and look for a breaker that has moved to the middle position (between ON and OFF) — that's the tripped one. First, turn it fully to the OFF position, then firmly flip it back to ON. If it trips again immediately or won't reset, do not keep resetting it. Unplug devices on that circuit and call us — a breaker that won't hold indicates a wiring or device issue that needs professional attention.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WHEN TO CALL -->
+  <section style="background:var(--off-white);padding:88px 0;" aria-labelledby="emergency-heading">
+    <div class="container">
+      <div style="max-width:760px;margin:0 auto;">
+        <div class="text-center">
+          <span class="section-label">Safety First</span>
+          <h2 class="section-title" id="emergency-heading">When to Call an Electrician Immediately</h2>
+          <p class="section-subtitle">
+            These signs can indicate a serious and potentially dangerous electrical problem.
+            Don't wait — call us right away.
+          </p>
+        </div>
+
+        <div class="emergency-list">
+
+          <div class="emergency-item">
+            <i data-lucide="wind" aria-hidden="true"></i>
+            <p>Burning smells or fishy odors coming from outlets, switches, or your electrical panel</p>
+          </div>
+
+          <div class="emergency-item">
+            <i data-lucide="volume-2" aria-hidden="true"></i>
+            <p>Buzzing or crackling sounds from outlets, walls, or the breaker panel</p>
+          </div>
+
+          <div class="emergency-item">
+            <i data-lucide="alert-triangle" aria-hidden="true"></i>
+            <p>Discolored or scorched outlet covers — yellowing or black marks indicate heat damage</p>
+          </div>
+
+          <div class="emergency-item">
+            <i data-lucide="zap" aria-hidden="true"></i>
+            <p>Shock or tingling sensations when touching an appliance, outlet, or switch</p>
+          </div>
+
+        </div>
+
+        <div style="margin-top:36px;padding:28px 32px;background:var(--navy);border-radius:var(--radius-lg);display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+          <div>
+            <p style="font-family:var(--font-heading);font-size:16px;font-weight:700;color:var(--white);margin-bottom:6px;">Experiencing any of these right now?</p>
+            <p style="font-size:14px;color:rgba(255,255,255,.6);line-height:1.5;">We offer 24/7 emergency electrical service throughout Hartford County.</p>
+          </div>
+          <a href="tel:8602426486" class="btn btn-primary" style="flex-shrink:0;">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            Call Now: (860) 242-6486
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <div class="cta-banner" role="complementary" aria-label="Call to action">
+    <div class="container">
+      <div class="cta-banner-inner">
+        <div>
+          <h2>Still have a question?</h2>
+          <p>Call us or fill out our contact form and we'll get you a straight answer — no run-around.</p>
+        </div>
+        <div class="cta-banner-btns">
+          <a href="tel:8602426486" class="btn btn-navy">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            (860) 242-6486
+          </a>
+          <a href="contact.html" class="btn btn-navy">
+            Contact Us
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo" aria-label="Brannack Electric Inc — Home">
+            <div class="nav-logo-icon" aria-hidden="true">B</div>
+            <div class="nav-logo-text">
+              <span class="nav-logo-name">BRANNACK ELECTRIC</span>
+              <span class="nav-logo-sub">Inc.</span>
+            </div>
+          </a>
+          <p>Family-owned electrical contractor serving Hartford County since 1980. Licensed, insured, and committed to quality work.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul role="list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="reviews.html">Reviews</a></li>
+            <li><a href="service-area.html">Service Area</a></li>
+            <li><a href="generator.html">Generator</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul role="list">
+            <li><a href="services.html#panel-installation">Panel Installation</a></li>
+            <li><a href="services.html#panel-repair">Panel Repair</a></li>
+            <li><a href="services.html#generator-installation">Generator Install</a></li>
+            <li><a href="services.html#ev-charger">EV Charger</a></li>
+            <li><a href="services.html#outlets-switches">Outlets &amp; Switches</a></li>
+            <li><a href="contact.html">Emergency Service</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Us</h4>
+          <div class="footer-contact-item">
+            <i data-lucide="phone" aria-hidden="true"></i>
+            <a href="tel:8602426486" style="color:rgba(255,255,255,.5);transition:color .2s ease;">(860) 242-6486</a>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <span>37 Tunxis Ave<br>Bloomfield, CT 06002</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="clock" aria-hidden="true"></i>
+            <span>Mon–Fri 7:00 AM – 5:00 PM<br>24/7 Emergency Service</span>
+          </div>
+          <div class="footer-contact-item">
+            <i data-lucide="star" aria-hidden="true"></i>
+            <span>5.0 Stars on Google</span>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 Brannack Electric Inc. All rights reserved. CT License #ELC.0103859-E1</p>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+    const hamburger  = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobileMenu');
+    hamburger.addEventListener('click', () => {
+      const open = mobileMenu.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', String(open));
+      mobileMenu.setAttribute('aria-hidden', String(!open));
+    });
+    function closeMenu() {
+      mobileMenu.classList.remove('open');
+      hamburger.setAttribute('aria-expanded', 'false');
+      mobileMenu.setAttribute('aria-hidden', 'true');
+    }
+    document.addEventListener('click', e => {
+      if (!nav.contains(e.target)) closeMenu();
+    });
+
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        document.querySelectorAll('.faq-question').forEach(b => {
+          b.setAttribute('aria-expanded', 'false');
+          document.getElementById(b.getAttribute('aria-controls')).classList.remove('open');
+        });
+        if (!expanded) {
+          btn.setAttribute('aria-expanded', 'true');
+          document.getElementById(btn.getAttribute('aria-controls')).classList.add('open');
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
