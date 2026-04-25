@@ -805,6 +805,85 @@ section { padding: 88px 0; }
 .service-card:hover .service-card-arrow { gap: 8px; color: var(--yellow-dark); }
 .service-card-arrow i { width: 14px; height: 14px; stroke: currentColor; }
 
+/* Featured generator card */
+.service-card--featured {
+  grid-column: 1 / -1;
+  background: var(--navy);
+  border-color: rgba(245,197,24,.2);
+}
+.service-card--featured:hover { border-color: var(--yellow); }
+.service-card--featured .service-card-link {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+.service-card--featured .service-card-icon {
+  flex-shrink: 0;
+  width: 72px;
+  height: 72px;
+  background: rgba(245,197,24,.12);
+  margin-bottom: 0;
+}
+.service-card--featured .service-card-icon i { stroke: var(--yellow); width: 34px; height: 34px; }
+.service-card--featured h3 { font-size: 22px; color: var(--white); margin-bottom: 10px; }
+.service-card--featured p { color: rgba(255,255,255,.7); font-size: 15px; }
+.service-card--featured .service-card-arrow { color: var(--yellow); margin-top: 14px; }
+.service-card--featured:hover .service-card-arrow { color: var(--yellow); }
+
+/* Mobile-only 2-card layout */
+.services-mobile-cards { display: none; }
+
+.service-card-mobile {
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: var(--radius-lg);
+  padding: 28px 22px;
+  transition: transform var(--ease), box-shadow var(--ease), border-color var(--ease);
+}
+.service-card-mobile:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); border-color: var(--yellow); }
+.service-card-mobile .service-card-link { display: block; color: inherit; }
+.service-card-mobile--generator { background: var(--navy); border-color: rgba(245,197,24,.2); }
+.service-card-mobile--generator:hover { border-color: var(--yellow); }
+.service-card-mobile .service-card-icon {
+  width: 52px; height: 52px;
+  background: rgba(10,22,40,.06);
+  border-radius: var(--radius);
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 16px;
+  transition: background var(--ease);
+}
+.service-card-mobile--generator .service-card-icon { background: rgba(245,197,24,.12); }
+.service-card-mobile .service-card-icon i { stroke: var(--navy); width: 26px; height: 26px; }
+.service-card-mobile--generator .service-card-icon i { stroke: var(--yellow); }
+.service-card-mobile h3 {
+  font-family: var(--font-heading);
+  font-size: 20px; font-weight: 700;
+  color: var(--navy); margin-bottom: 8px;
+}
+.service-card-mobile--generator h3 { color: var(--white); }
+.service-card-mobile > .service-card-link > p { font-size: 14px; color: var(--gray-600); line-height: 1.62; }
+.service-card-mobile--generator > .service-card-link > p { color: rgba(255,255,255,.7); }
+.service-card-mobile-list {
+  list-style: none; margin: 10px 0 0; padding: 0;
+  display: flex; flex-direction: column; gap: 7px;
+}
+.service-card-mobile-list li {
+  font-size: 14px; color: var(--gray-600);
+  padding-left: 18px; position: relative;
+}
+.service-card-mobile-list li::before {
+  content: '✓'; position: absolute; left: 0;
+  color: var(--navy); font-weight: 700; font-size: 13px;
+}
+.service-card-mobile .service-card-arrow {
+  display: inline-flex; align-items: center; gap: 5px; margin-top: 16px;
+  font-size: 13px; font-weight: 700; color: var(--navy);
+  font-family: var(--font-heading); transition: gap var(--ease), color var(--ease);
+}
+.service-card-mobile--generator .service-card-arrow { color: var(--yellow); }
+.service-card-mobile:hover .service-card-arrow { gap: 8px; }
+.service-card-mobile .service-card-arrow i { width: 14px; height: 14px; stroke: currentColor; }
+
 /* Services Full-Page Detail Sections */
 .services-full { background: var(--white); }
 
@@ -1475,7 +1554,8 @@ section { padding: 88px 0; }
   .trust-item { border-right: none !important; border-bottom: 1px solid rgba(10,22,40,.14); padding: 16px 20px; }
   .trust-item:last-child { border-bottom: none; }
 
-  .services-grid { grid-template-columns: 1fr; gap: 14px; }
+  .services-grid { display: none; }
+  .services-mobile-cards { display: flex; flex-direction: column; gap: 14px; }
 
   .hero-ctas { flex-direction: column; }
   .hero-ctas .btn { width: 100%; justify-content: center; }
