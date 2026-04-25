@@ -285,6 +285,15 @@ section { padding: 88px 0; }
 .nav-dropdown:hover .nav-dropdown-chevron,
 .nav-dropdown:focus-within .nav-dropdown-chevron { transform: rotate(180deg); }
 
+.nav-dropdown::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 14px;
+}
+
 .nav-dropdown-menu {
   display: none;
   position: absolute;
