@@ -748,9 +748,12 @@ section { padding: 88px 0; }
 
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   gap: 24px;
 }
+.services-grid .service-card { grid-column: span 2; }
+.services-grid .service-card--featured { grid-column: 1 / -1; }
+.services-grid .service-card:nth-last-child(-n+2):not(.service-card--featured) { grid-column: span 3; }
 
 .service-card {
   background: var(--white);
@@ -1524,6 +1527,8 @@ section { padding: 88px 0; }
   .trust-item:nth-last-child(-n+2) { border-bottom: none; }
 
   .services-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .services-grid .service-card { grid-column: span 1; }
+  .services-grid .service-card:nth-last-child(-n+2):not(.service-card--featured) { grid-column: span 1; }
 
   .reviews-grid  { grid-template-columns: 1fr; }
   .review-card   { padding: 22px; }
