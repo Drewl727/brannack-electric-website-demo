@@ -445,7 +445,7 @@ section { padding: 88px 0; }
       rgba(10,22,40,.3) 100%),
     url('https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=1400&q=80') center/cover no-repeat
     var(--navy);
-  overflow: hidden;
+  overflow: clip;
   padding-top: var(--nav-h);
 }
 
@@ -566,10 +566,9 @@ section { padding: 88px 0; }
   gap: 56px;
   align-items: start;
   width: 100%;
-  min-height: calc(100vh - var(--nav-h) - 144px);
 }
 
-.hero-left { max-width: 580px; align-self: center; }
+.hero-left { max-width: 580px; }
 
 .hero-form-panel {
   background: var(--yellow);
@@ -577,7 +576,8 @@ section { padding: 88px 0; }
   padding: 32px 28px;
   box-shadow: 0 12px 48px rgba(0,0,0,.28);
   flex-shrink: 0;
-  align-self: center;
+  position: sticky;
+  top: calc(var(--nav-h) + 20px);
 }
 
 .hero-form-panel h3 {
