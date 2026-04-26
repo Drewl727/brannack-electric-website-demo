@@ -564,11 +564,12 @@ section { padding: 88px 0; }
   display: grid;
   grid-template-columns: 1fr 420px;
   gap: 56px;
-  align-items: center;
+  align-items: start;
   width: 100%;
+  min-height: calc(100vh - var(--nav-h) - 144px);
 }
 
-.hero-left { max-width: 580px; }
+.hero-left { max-width: 580px; align-self: center; }
 
 .hero-form-panel {
   background: var(--yellow);
@@ -576,6 +577,7 @@ section { padding: 88px 0; }
   padding: 32px 28px;
   box-shadow: 0 12px 48px rgba(0,0,0,.28);
   flex-shrink: 0;
+  align-self: center;
 }
 
 .hero-form-panel h3 {
