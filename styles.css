@@ -257,6 +257,7 @@ section { padding: 88px 0; }
   font-weight: 600;
   letter-spacing: .03em;
   transition: color var(--ease);
+  white-space: nowrap;
 }
 .nav-links a:hover { color: var(--yellow); }
 .nav-links a.active { color: var(--yellow) !important; }
@@ -277,6 +278,7 @@ section { padding: 88px 0; }
   align-items: center;
   gap: 4px;
   padding: 0;
+  white-space: nowrap;
 }
 .nav-dropdown-toggle:hover,
 .nav-dropdown-toggle.active { color: var(--yellow); }
