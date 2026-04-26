@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://drewl727.github.io/brannack-electric-website-demo/sitemap.xml
+Sitemap: https://brannackelectric.com/sitemap.xml
