@@ -1180,7 +1180,10 @@ section { padding: 88px 0; }
   gap: 2px;
   margin-bottom: 14px;
 }
-.review-stars i { width: 16px; height: 16px; fill: var(--yellow); stroke: var(--yellow); }
+.review-stars i,
+.review-stars svg { width: 16px; height: 16px; fill: var(--yellow); stroke: var(--yellow); }
+.review-stars svg polygon,
+.review-stars svg path { fill: var(--yellow); }
 
 .review-text {
   font-size: 15px;
