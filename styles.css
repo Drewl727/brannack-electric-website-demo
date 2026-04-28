@@ -598,6 +598,7 @@ section { padding: 88px 0; }
 .hero-form-panel .form-group input,
 .hero-form-panel .form-group select,
 .hero-form-panel .form-group textarea {
+  width: 100%;
   background: var(--white);
   border: 1px solid rgba(10,22,40,.15);
   color: var(--gray-900);
@@ -831,7 +832,7 @@ section { padding: 88px 0; }
   background: var(--yellow);
   margin-bottom: 0;
 }
-.service-card--featured .service-card-icon i { stroke: var(--yellow); width: 34px; height: 34px; }
+.service-card--featured .service-card-icon i { stroke: var(--navy); width: 34px; height: 34px; }
 .service-card--featured h3 { font-size: 22px; color: var(--white); margin-bottom: 10px; }
 .service-card--featured p { color: rgba(255,255,255,.7); font-size: 15px; }
 .service-card--featured .service-card-arrow { color: var(--yellow); margin-top: 14px; }
@@ -1117,7 +1118,7 @@ section { padding: 88px 0; }
   justify-content: center;
   margin: 0 auto 20px;
 }
-.why-icon i { stroke: var(--yellow); width: 28px; height: 28px; }
+.why-icon i { stroke: var(--navy); width: 28px; height: 28px; }
 
 .why-card h3 {
   font-family: var(--font-heading);
@@ -1198,7 +1199,9 @@ section { padding: 88px 0; }
   font-size: 12px;
   color: var(--gray-400);
   font-weight: 500;
+  transition: color var(--ease);
 }
+a.review-footer:hover { color: var(--navy); }
 
 /* =============================================================
    SERVICE AREA
